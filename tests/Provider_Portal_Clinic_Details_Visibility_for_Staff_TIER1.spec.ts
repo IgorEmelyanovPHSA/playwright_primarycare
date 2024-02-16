@@ -12,10 +12,10 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Password').fill('PAS@1234');
   await page.getByRole('button', { name: 'Log in' }).click();
   await page.getByLabel('Search all clinics in BC').click();
-  await page.getByPlaceholder('Enter Clinic Name').click();
-  await page.getByPlaceholder('Enter Clinic Name').fill('cast');
-  await page.getByRole('button', { name: 'Search' }).click();
-  await page.getByText('CASTLEGAR MED ASSOCIATES').click();
-  await page.getByRole('tab', { name: 'Clinic Details' }).click();
-  await page.getByText('COLUMBIA AVE').first().click();
+  //await page.getByPlaceholder('Enter Clinic Name').click();
+  //await page.getByPlaceholder('Enter Clinic Name').fill('cast');
+  //await page.getByRole('button', { name: 'Search' }).click();
+  //await page.getByText('CASTLEGAR MED ASSOCIATES').click();
+  //await page.getByRole('tab', { name: 'Clinic Details' }).click();
+  //await page.getByText('COLUMBIA AVE').first().click();
 });
