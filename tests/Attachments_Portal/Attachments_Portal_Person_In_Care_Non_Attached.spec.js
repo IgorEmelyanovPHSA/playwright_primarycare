@@ -25,9 +25,9 @@ test('test', async ({ page }) => {
   await page.locator('#content-167').click();
   await page.getByPlaceholder('MM').click();
   await page.getByPlaceholder('MM').fill('12');
-  await page.getByPlaceholder('DD').dblclick();
+  await page.getByPlaceholder('DD').click();
   await page.getByPlaceholder('DD').fill('05');
-  await page.getByPlaceholder('YYYY').dblclick();
+  await page.getByPlaceholder('YYYY').click();
   await page.getByPlaceholder('YYYY').fill('1959');
   await page.getByPlaceholder('DD').click();
   //await page.getByRole('button', { name: 'Continue' }).click();
