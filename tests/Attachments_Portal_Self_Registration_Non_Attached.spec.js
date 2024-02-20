@@ -7,7 +7,7 @@ const {test, expect} = require('@playwright/test')
 
 
 
-test('My first test', async ({page}) => {
+test('Can_do_Self_Registration_for_Not_Attached_in_Portal', async ({page}) => {
 
   
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');

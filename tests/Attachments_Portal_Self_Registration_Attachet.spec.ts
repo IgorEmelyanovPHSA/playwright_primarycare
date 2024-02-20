@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('Can_do_Self_Registration_for_Attached_in_Portal', async ({ page }) => {
   // Recording...
 await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
 await page.getByRole('button', { name: 'Next' }).click();
