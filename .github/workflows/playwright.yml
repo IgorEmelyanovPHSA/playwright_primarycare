@@ -2,9 +2,9 @@ name: Playwright Tests
 on:
   push:
 
-    branches: [ igor_primarycare_qax ]
+    branches: [ primarycare_qax ]
   pull_request:
-    branches: [ igor_primarycare_qax ]
+    branches: [ primarycare_qax ]
 
 jobs:
   test:
