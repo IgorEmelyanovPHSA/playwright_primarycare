@@ -45,7 +45,7 @@ test('Can_Register_on_iPhone11', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Postal code' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
-  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('Igor Gardiam Contact NAme');
+  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('Igor Gardian Contact NAme');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).fill('accountToDelete@phsa.ca');
