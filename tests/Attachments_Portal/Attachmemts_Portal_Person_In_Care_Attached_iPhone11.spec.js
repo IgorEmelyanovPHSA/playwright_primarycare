@@ -4,7 +4,7 @@ test.use({
   ...devices['iPhone 11'],
 });
 
-test('test', async ({ page }) => {
+test('Can_Register_on_iPhone11', async ({ page }) => {
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register a person in my care' }).click();

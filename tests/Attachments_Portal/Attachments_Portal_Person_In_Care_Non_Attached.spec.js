@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ page }) => {
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register a person in my care' }).click();
@@ -20,7 +20,6 @@ test('test', async ({ page }) => {
     await page.getByLabel('Last name', { exact: true }).click();
   await page.getByLabel('Last name', { exact: true }).fill('Troup');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
-  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
   await page.locator('#content-167').click();
   await page.getByPlaceholder('MM').click();
@@ -30,7 +29,7 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('YYYY').click();
   await page.getByPlaceholder('YYYY').fill('1959');
   await page.getByPlaceholder('DD').click();
-  //await page.getByRole('button', { name: 'Continue' }).click();
-  //await page.getByRole('button', { name: 'Continue' }).click();
-  
+  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+
 });
