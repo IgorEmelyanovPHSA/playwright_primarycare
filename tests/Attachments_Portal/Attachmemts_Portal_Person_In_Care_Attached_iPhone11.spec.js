@@ -31,7 +31,7 @@ test('Can_Register_on_iPhone11', async ({ page }) => {
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByLabel('Last name', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  //await page.locator('(//button[@aria-label="Continue"])[1]').click();
+  //await page.locator('(//button[@aria-label="Continue"])[2]').click();
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('309-7631 Francis Rd');
@@ -77,7 +77,8 @@ test('Can_Register_on_iPhone11', async ({ page }) => {
   await page.locator('#inputId-653').click();
   await page.locator('#inputId-653').fill('French');
   await page.getByText('French').click();
-  await page.getByRole('button', { name: 'Continue' }).click();
+  //await page.getByRole('button', { name: 'Continue' }).click();
+  await page.locator('(//button[@aria-label="Continue"])[2]').click();
   //await page.getByRole('button', { name: 'Submit registration' }).click();
   //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   //await page.getByRole('button', { name: 'Start a new registration' }).click();
