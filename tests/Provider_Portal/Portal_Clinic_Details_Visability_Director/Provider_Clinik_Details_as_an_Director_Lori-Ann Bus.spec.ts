@@ -14,5 +14,5 @@ test('Can_see_Clinic_Details_as_an_Director', async ({ page }) => {
   await page.getByRole('button', { name: 'Search' }).click();
   await page.getByText('CASTLEGAR MED ASSOCIATES').click();
   await page.getByRole('tab', { name: 'Clinic Details' }).click();
-  await page.getByText('COLUMBIA AVE').first().click();
+  await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
 });
