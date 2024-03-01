@@ -29,15 +29,15 @@ test('Can_see_Clinic_Details_as_an_TIER1', async ({page}) => {
   await page.locator('#sfdc_password_container div').click();
   await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
   await page.getByPlaceholder('Password').fill('PAS@1234');
-  ///user is not Activated yet after Refreshmnts.
-  //await page.getByRole('button', { name: 'Log in' }).click();
-  //await page.getByLabel('Search all clinics in BC').click();
+  ///if user is not Activated yet after Refreshments.
+  await page.getByRole('button', { name: 'Log in' }).click();
+  await page.getByLabel('Search all clinics in BC').click();
 
-  //await page.getByPlaceholder('Enter Clinic Name').click();
-  //await page.getByPlaceholder('Enter Clinic Name').fill('cast');
-  //await page.getByRole('button', { name: 'Search' }).click();
-  //await page.getByText('CASTLEGAR MED ASSOCIATES').click();
-  //await page.getByRole('tab', { name: 'Clinic Details' }).click();
-  //await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
+  await page.getByPlaceholder('Enter Clinic Name').click();
+  await page.getByPlaceholder('Enter Clinic Name').fill('cast');
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.getByText('CASTLEGAR MED ASSOCIATES').click();
+  await page.getByRole('tab', { name: 'Clinic Details' }).click();
+  await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
 
 });
