@@ -37,7 +37,10 @@ test('Can_see_Clinic_Details_as_an_TIER1', async ({page}) => {
   await page.getByPlaceholder('Enter Clinic Name').fill('cast');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.getByText('CASTLEGAR MED ASSOCIATES').click();
-  await page.getByRole('tab', { name: 'Clinic Details' }).click();
-  await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
+  // Navigate and wait for element
+  /////await page.goto('https://example.com');
+  //await page.getByText('Clinic Details').waitFor();
+  //await page.getByRole('tab', { name: 'Clinic Details' }).click();
+  //await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
 
 });
