@@ -1,10 +1,10 @@
 name: Playwright Tests
 on:
   push:
-
-    branches: [ igor_primarycare_qax ]
+  
   pull_request:
-    
+    branches: [ primarycare_qax ]
+
 jobs:
   test:
     timeout-minutes: 60
