@@ -4,7 +4,9 @@ test.use({
   ...devices['iPhone 11'],
 });
 
-test('Can_Register_on_iPhone11', async ({ page }) => {
+test('Can_Register_on_iPhone11', async ({ page }, testInfo) => {
+  console.log("Default timeout is: " +testInfo.timeout);
+  //test.setTimeout(80000);
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   /////await page.pause();
   await page.getByRole('button', { name: 'Next' }).click();
