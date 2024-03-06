@@ -17,7 +17,7 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
   await page.getByLabel('First name', { exact: true }).click();
   await page.getByLabel('First name', { exact: true }).click();
   await page.getByLabel('First name', { exact: true }).fill('Kenton');
-    await page.getByLabel('Last name', { exact: true }).click();
+  await page.getByLabel('Last name', { exact: true }).click();
   await page.getByLabel('Last name', { exact: true }).fill('Troup');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
