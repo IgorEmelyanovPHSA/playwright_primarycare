@@ -4,8 +4,7 @@ on:
 
     branches: [ igor_primarycare_qax ]
   pull_request:
-    branches: [ igor_primarycare_qax ]
-
+    
 jobs:
   test:
     timeout-minutes: 60
