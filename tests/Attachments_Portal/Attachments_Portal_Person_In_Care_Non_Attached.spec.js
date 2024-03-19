@@ -9,17 +9,17 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
   //Tell the DevTools session to record Performance Metrics
   //await client.send('Performance.enable');
 
-  const { chromium } = require('playwright');  // Or 'chromium' or 'webkit'.
+  //const { chromium } = require('playwright');  // Or 'chromium' or 'webkit'.
 
-(async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com');
+  //(async () => {
+    //const browser = await chromium.launch();
+    //const page = await browser.newPage();
+    //await page.goto('https://example.com');
   //await browser.close();
-})();
+  //});
 
-  console.log("\n=====Devtools : startTracing =====\n");
-  await browser.startTracing(page, {path: '.trace.json', sceenshots: true});
+  //console.log("\n=====Devtools : startTracing =====\n");
+  //await browser.startTracing(page, {path: '.trace.json', sceenshots: true});
   
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
 
@@ -45,7 +45,6 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
   await page.getByLabel('Last name', { exact: true }).fill('Troup');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
-  await page.locator('#content-167').click();
   await page.getByPlaceholder('MM').click();
   await page.getByPlaceholder('MM').fill('12');
   await page.getByPlaceholder('DD').click();
