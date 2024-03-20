@@ -216,7 +216,7 @@ await page.locator('label').filter({ hasText: 'Chronic infectious diseases,' }).
 await page.getByRole('button', { name: 'Continue' }).click();
 await page.getByRole('button', { name: 'Submit registration' }).click();
 /////just for work around
-await page.getByRole('button', { name: 'Continue' }).click();
+//await page.getByRole('button', { name: 'Continue' }).click();
 /////just for work around
 ///////await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/patient-summary?c__target=c%3ApatientRegistrationMainPatientRegistrationEntrySummaryEnglish&c__layout=lightning&c__selfRegister=true&c__careRegister=false&c__IsPrimary=true&c__attachmentGroupId=null&c__primaryAccountIdValue=001Aq00000NcVqNIAV&c__patientId=001Aq00000NcVqNIAV');
 await page.getByRole('heading', { name: 'Successfully registered!' }).click();
