@@ -1,0 +1,221 @@
+.omni-block_content[omnistudio-omniscriptBlock_omniscriptBlock]{
+  padding-left:0 !important; 
+}
+
+
+label.slds-form-element__label{
+  font-family: 'BC Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+color: #313132;
+}
+
+omnistudio-omniscript-text-block[data-omni-key="registrationSuccessful"]{
+		margin-top: -8px;
+		margin-top: -10px;
+	}
+	
+omnistudio-omniscript-text-block[data-omni-key="TextBlock1"]{
+		margin-top: -4px;
+		height: 52px;
+	}
+	
+omnistudio-omniscript-text-block[data-omni-key="detailsForMembers"]{
+		margin-top: 3px;
+	}
+	
+  omnistudio-omniscript-text,omnistudio-omniscript-typeahead,omnistudio-omniscript-email,omnistudio-omniscript-telephone,
+  omnistudio-omniscript-checkbox,omnistudio-omniscript-select{
+		margin-bottom: 32px !important;
+	}
+	
+
+  .vlc-separator{
+    display: none;
+  }
+  .slds-page-header__title{
+	display: inline-block;
+	border-bottom: 1.5px solid #285DAC;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-bottom: 8px;
+	margin-bottom: 32px;
+   }
+/*DHSOPR-2491*/
+
+    /* .os-step-label{
+        margin-top: 40px;
+    } */
+	
+	/*Headers and body*/
+	/*spacing and typography*/
+	hr{
+    margin: 48px 0;
+  }
+	.header-h1{
+		font-size:37px !important;
+		line-height:56px;
+		margin-bottom: 32px !important;
+		color: #313132;
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+		font-weight: bold;
+    margin-top: 0;
+    padding: 0;
+	}
+	.body-text{
+		font-size:16px !important;
+		line-height:24px;
+		margin-bottom: 24px !important;
+		color: #313132;	
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+
+	}
+	.body-text2{
+		font-size:16px !important;
+		line-height:24px;
+		color: #313132;	
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+
+	}
+	.body-text3{
+		font-size:16px !important;
+		line-height:24px;
+		color: #313132;	
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+        margin-bottom: 5px !important;
+	}
+  .no-margin{
+    margin: 0 !important;
+  }
+  omnistudio-omniscript-line-break[data-omni-key="LineBreak2"],omnistudio-omniscript-line-break[data-omni-key="LineBreak3"],omnistudio-omniscript-line-break[data-omni-key="LineBreak4"]{
+    display: none;
+  }
+	.header-h2{
+		font-size:32px !important ;
+		line-height:48px;
+		margin-bottom: 32px !important;
+		color: #313132;	
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+		font-family: bold;
+    margin-top: 0;
+    padding: 0;
+	}
+  .header-h3{
+    color:#313132;
+    /* Experience Cloud/Desktop/Headers/H3 */
+    font-family: BC Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+	.body-text1{
+		font-size:16px !important;
+		line-height:24px;
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+		color: #313132;
+    margin-top: 0;
+    padding: 0;
+    
+	}
+  
+  .mg-body-normal{
+    margin-bottom: 16px;
+  }
+  .body-margin{
+margin-bottom: 48px;
+  }
+	.bold-text{
+    font-weight: bold;
+  }
+  .body-link{
+    text-decoration: underline; 
+    color: #3598db; 
+  }
+	/*MEDIA QUERIES*/
+	/*mobile*/
+	@media only screen and (max-width: 767px){
+    hr{
+      margin: 32px 0;
+    }
+	.header-h1{
+		font-size:28px !important;
+		line-height:40px;
+		margin-bottom: 24px !important;
+		color: #313132;
+	}
+	.body-text1{
+		font-size:16px;
+		line-height:24px;
+		margin-bottom: 4;
+		
+	}
+	.header-h2{
+		font-size:24px !important;
+		line-height:36px;
+		margin-bottom: 16px !important;	
+	}
+  .header-h3{
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 16px !important;
+  }
+  .body-margin{
+    margin-bottom: 32px;
+  }
+   .extra-marginbottom2{
+		  margin-bottom:28px !important;
+	  }
+  omnistudio-omniscript-text,omnistudio-omniscript-typeahead,omnistudio-omniscript-email,omnistudio-omniscript-telephone,
+  omnistudio-omniscript-checkbox,omnistudio-omniscript-select{
+		margin-bottom: 24px !important;
+	}
+	
+	 /*DHSOPR-4893*/
+		omnistudio-omniscript-typeahead[data-omni-key="displayName"] .slds-truncate, 
+		omnistudio-omniscript-edit-block[data-omni-key="ListOfName"] .slds-truncate{
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: clip;
+			white-space: normal;
+		}
+			
+	/*DHSOPR-4893*/
+		  
+}
+	
+	/*tablet*/
+	@media screen and (min-width:768px) and (max-width: 1023px){
+	.header-h1{
+		font-size:32px !important;
+		line-height:48px;
+		margin-bottom: 32px !important;
+	}
+	.body-text{
+		font-size:16px;
+		line-height:24px;
+		margin-bottom: 48px;
+	}
+	.header-h2{
+		font-size:28px !important;
+		line-height:40px;
+		margin-bottom: 32px !important;
+		color: #313132;	
+	}
+  .header-h3{
+    font-size: 24px;
+    line-height: 36px;
+  }
+	}
+
+	

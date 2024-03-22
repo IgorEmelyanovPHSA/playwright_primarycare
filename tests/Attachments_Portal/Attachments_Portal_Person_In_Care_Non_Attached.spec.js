@@ -1,31 +1,24 @@
 import { test, expect } from '@playwright/test';
 import { constants } from 'buffer';
 
-test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ page }) => {
+test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({page, browser }) => {
   
-  //console.log("\n=====Devtools : enable Performance Metrics =====\n");
+  console.log("\n=====Devtools : enable Performance Metrics =====\n");
   //Create a new connection to an eisting CDPSession to enable Performance Mesurements
-  //const client = await page.context().newCDPSession(page);
+  const client = await page.context().newCDPSession(page);
   //Tell the DevTools session to record Performance Metrics
-  //await client.send('Performance.enable');
-
-  //const { chromium } = require('playwright');  // Or 'chromium' or 'webkit'.
-
-  //(async () => {
-    //const browser = await chromium.launch();
-    //const page = await browser.newPage();
-    //await page.goto('https://example.com');
-  //await browser.close();
-  //});
-
-  //console.log("\n=====Devtools : startTracing =====\n");
-  //await browser.startTracing(page, {path: '.trace.json', sceenshots: true});
-  
+  await client.send('Performance.enable');
+  console.log("\n=====Devtools : startTracing =====\n");
+  await browser.startTracing(page, {path: 'trace.json', sceenshots: true});
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
-
-  //START - Use Performance.mark API
+  ///////START - Use Performance.mark API
   await page.evaluate(() => window.performance.mark("perf:start"));
-
+  ///////
+  ///FCP - First Content Paint tracing
+  //const paintTimingJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType('paint')))
+  //const paintTiming = JSON.parse(paintTimingJson)
+  //console.log(paintTiming)
+  //////
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register a person in my care' }).click();
   await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
@@ -54,27 +47,96 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
   await page.getByPlaceholder('DD').click();
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  
+
+  console.log("\n=====The Paint Timing =====\n");
+  ///FCP - First Content Paint tracing
+  const paintTimingJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType('paint')))
+  const paintTiming = JSON.parse(paintTimingJson)
+  console.log(paintTiming)
+  ///LCP 
+  const largestContentfulPaint = await page.evaluate(() => {
+    return new Promise((resolve) => {
+      new PerformanceObserver((l) => {
+        const entries = l.getEntries()
+        // the last entry is the largest contentful paint
+        const largestPaintEntry = entries.at(-1)
+        resolve(largestPaintEntry.startTime)
+      }).observe({
+        type: 'largest-contentful-paint',
+        buffered: true
+      })
+    })
+  })
+  console.log("\n largestContentfulPaint =", parseFloat(largestContentfulPaint))
+  /////////////////////////////////////
+
+
+  console.log("\n=====Devtools : Performance.getMetricd =====\n");
+  let performanceMetrics = await client.send('Performance.getMetrics');
+  console.log(performanceMetrics.metrics);
+
+  console.log("\n=====Devtools : Get Tracing =====\n");
   //Performance.mark API - STOP
-  await page.evaluate(() => window.performance.mark("perf:stop"));
   
+  await page.evaluate(() => window.performance.mark("perf:stop"));
   //Performance.measure API
-  await page.evaluate(() => window.performance.measure("overall","perf:start","perf:stop"));
-
-  //Get All Performance Marks Includinh Google'e
-  const getAllMarksJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType("measure")));
+  await page.evaluate(() => window.performance.measure("overall_IGOR_Mark","perf:start","perf:stop"));
+  //Get All Performance Marks Including Google'e
+  const getAllMarksJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType("mark")));
   const getAllMarks = JSON.parse(getAllMarksJson);
-  console.log('window.performance.getEntriesByType("measure")', getAllMarks);
-
-  //Get All Performance Measures Includinh Google'e
+  console.log('window.performance.getEntriesByType("mark")', getAllMarks);
+  //Get All Performance Measures Including Google'e
   const getAllMeasureJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType("measure")));
-  const getAllMeasures = JSON.parse(getAllMarksJson);
+  const getAllMeasures = JSON.parse(getAllMeasureJson);
   console.log('window.performance.getEntriesByType("measure")', getAllMeasures);
 
-
-
-  //console.log("\n=====Devtools : Performance.getMetricd =====\n");
-  //et performanceMetrics = await client.send('Performance.getMetrics');
-  //onsole.log(performanceMetrics.metrics);
-
+  console.log("\n=====Devtools : stopTracing =====\n");
+  await browser.stopTracing();
 });
+
+
+//test('HAR_Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({browser }) => {
+  ////HAR////
+  //console.log("\n=====Generate HAR file =====\n");
+  // Create a new incognito browser context
+  //const context = await browser.newContext();
+  // Create a new page inside context.
+  //const page = await context.newPage();
+  //await page.routeFromHAR("har/Patient.har", {update: true})
+  //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/', {waitUntil:"domcontentloaded"})
+  ///await page.waitForTimeout(5000)
+  ///HAR////
+  /////await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
+  //await page.getByRole('button', { name: 'Next' }).click();
+  //await page.getByRole('button', { name: 'Register a person in my care' }).click();
+  //await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
+  //await page.getByText('Case manager').click();
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('Your first and last name').fill('Igor Emelyanov CAse MAnager');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('First name', { exact: true }).click();
+  //await page.getByLabel('First name', { exact: true }).click();
+  //await page.getByLabel('First name', { exact: true }).fill('Kenton');
+  //await page.getByLabel('Last name', { exact: true }).click();
+  //await page.getByLabel('Last name', { exact: true }).fill('Troup');
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
+  //await page.getByPlaceholder('MM').click();
+  //await page.getByPlaceholder('MM').fill('12');
+  //await page.getByPlaceholder('DD').click();
+  //await page.getByPlaceholder('DD').fill('05');
+  //await page.getByPlaceholder('YYYY').click();
+  //await page.getByPlaceholder('YYYY').fill('1959');
+  //await page.getByPlaceholder('DD').click();
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  //await page.getByRole('button', { name: 'Continue' }).click();
+
+  // Dispose context once it's no longer needed. HAR
+  //await context.close();
+
+//);

@@ -220,7 +220,7 @@ test('Can_Register_on_iPhone11', async ({ page }, testInfo) => {
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Submit registration' }).click();
   /////just for work around
-  await page.getByRole('button', { name: 'Continue' }).click();
+  //await page.getByRole('button', { name: 'Continue' }).click();
   /////just for work around
   await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   await page.getByRole('button', { name: 'Add a family member' }).click();
