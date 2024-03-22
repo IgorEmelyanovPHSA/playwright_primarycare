@@ -151,8 +151,18 @@ test('API_Preconditionong_Removing_Dups_Sandy_Prior', async ({request, baseURL})
 
 
 
-test('Can_do_Self_Registration_for_Attached_in_Portal', async ({ page }) => {
+test('Can_do_Self_Registration_for_Attached_in_Portal', async ({page, browser }) => {
   // Recording...
+ ////HAR////
+ //console.log("\n=====Generate HAR file =====\n");
+ // Create a new incognito browser context
+ //const context = await browser.newContext();
+ // Create a new page inside context.
+ //const page = await context.newPage();
+ //await page.routeFromHAR("har/SelfRegistrationSandy.har", {update: true})
+ //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/', {waitUntil:"domcontentloaded"})
+ ////await page.waitForTimeout(5000)
+ ///HAR////
 await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
 await page.getByRole('button', { name: 'Next' }).click();
 await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -221,4 +231,8 @@ await page.getByRole('button', { name: 'Submit registration' }).click();
 ///////await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/patient-summary?c__target=c%3ApatientRegistrationMainPatientRegistrationEntrySummaryEnglish&c__layout=lightning&c__selfRegister=true&c__careRegister=false&c__IsPrimary=true&c__attachmentGroupId=null&c__primaryAccountIdValue=001Aq00000NcVqNIAV&c__patientId=001Aq00000NcVqNIAV');
 await page.getByRole('heading', { name: 'Successfully registered!' }).click();
 await page.getByRole('button', { name: 'Add a family member' }).click();
+
+// Dispose context once it's no longer needed. HAR
+//await context.close();
+
 });

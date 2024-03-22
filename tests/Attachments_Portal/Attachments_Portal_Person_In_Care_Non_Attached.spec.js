@@ -1,16 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { constants } from 'buffer';
 
-test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ page, browser }) => {
+test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({page, browser }) => {
   
   console.log("\n=====Devtools : enable Performance Metrics =====\n");
   //Create a new connection to an eisting CDPSession to enable Performance Mesurements
   const client = await page.context().newCDPSession(page);
   //Tell the DevTools session to record Performance Metrics
   await client.send('Performance.enable');
-
-  
-
   console.log("\n=====Devtools : startTracing =====\n");
   await browser.startTracing(page, {path: 'trace.json', sceenshots: true});
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
@@ -83,7 +80,7 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
   
   await page.evaluate(() => window.performance.mark("perf:stop"));
   //Performance.measure API
-  await page.evaluate(() => window.performance.measure("overall","perf:start","perf:stop"));
+  await page.evaluate(() => window.performance.measure("overall_IGOR_Mark","perf:start","perf:stop"));
   //Get All Performance Marks Including Google'e
   const getAllMarksJson = await page.evaluate(() => JSON.stringify(window.performance.getEntriesByType("mark")));
   const getAllMarks = JSON.parse(getAllMarksJson);
@@ -95,6 +92,51 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({ pa
 
   console.log("\n=====Devtools : stopTracing =====\n");
   await browser.stopTracing();
-
-
 });
+
+
+//test('HAR_Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({browser }) => {
+  ////HAR////
+  //console.log("\n=====Generate HAR file =====\n");
+  // Create a new incognito browser context
+  //const context = await browser.newContext();
+  // Create a new page inside context.
+  //const page = await context.newPage();
+  //await page.routeFromHAR("har/Patient.har", {update: true})
+  //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/', {waitUntil:"domcontentloaded"})
+  ///await page.waitForTimeout(5000)
+  ///HAR////
+  /////await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
+  //await page.getByRole('button', { name: 'Next' }).click();
+  //await page.getByRole('button', { name: 'Register a person in my care' }).click();
+  //await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
+  //await page.getByText('Case manager').click();
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('Your first and last name').fill('Igor Emelyanov CAse MAnager');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').press('ArrowLeft');
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('Your first and last name').click();
+  //await page.getByLabel('First name', { exact: true }).click();
+  //await page.getByLabel('First name', { exact: true }).click();
+  //await page.getByLabel('First name', { exact: true }).fill('Kenton');
+  //await page.getByLabel('Last name', { exact: true }).click();
+  //await page.getByLabel('Last name', { exact: true }).fill('Troup');
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
+  //await page.getByPlaceholder('MM').click();
+  //await page.getByPlaceholder('MM').fill('12');
+  //await page.getByPlaceholder('DD').click();
+  //await page.getByPlaceholder('DD').fill('05');
+  //await page.getByPlaceholder('YYYY').click();
+  //await page.getByPlaceholder('YYYY').fill('1959');
+  //await page.getByPlaceholder('DD').click();
+  //await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  //await page.getByRole('button', { name: 'Continue' }).click();
+
+  // Dispose context once it's no longer needed. HAR
+  //await context.close();
+
+//);

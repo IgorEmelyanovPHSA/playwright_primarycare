@@ -1,0 +1,799 @@
+.omni-block_content[omnistudio-omniscriptBlock_omniscriptBlock]{
+	padding-left:0 !important; 
+  }
+  .slds-checkbox__label{
+	display: flex;
+  }
+  .slds-radio__label{
+	display: flex;
+	margin-bottom: 10px;
+  }
+  .omni-block_content label.slds-truncate{
+	white-space: normal;
+  }
+  
+  label.slds-form-element__label{
+	font-family: 'BC Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #313132;
+  }
+  /*Atatchment related*/
+  runtime_omnistudio_omniscript-omniscript-checkbox[data-omni-key="isPrimaryContact"]{
+	width: 21px;
+	margin-top: 7px;
+  }
+  
+  omnistudio-omniscript-checkbox[data-omni-key="isPrimaryContact"]{
+	  width: 27px;
+	  /*margin-top: 11px;*/
+	  margin-top: 5px;
+  }
+  omnistudio-omniscript-text-block[data-omni-key="isPrimaryContactText"]{
+	width:80%;
+  }
+  omnistudio-omniscript-text-block[data-omni-key="isPrimaryContactText"] .slds-rich-text-editor__output,omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"] label .slds-form-element__label,runtime_omnistudio_omniscript-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"] label .slds-form-element__label{
+	font-family: 'BC Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 22px;
+  /* identical to box height */
+  color: #313132;
+  }
+  omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"] label,runtime_omnistudio_omniscript-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"] label{
+	display: flex;
+	align-items: center;
+  }
+   /*DHSOPR-4106 Line Alignment*/
+	.vlc-separator{
+		display:none;
+	}
+	.slds-page-header__title{
+		display: inline-block;
+		border-bottom: 1.5px solid #285DAC;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		padding-bottom: 8px;
+		margin-bottom: 32px;
+	}
+   /*DHSOPR-4106*/
+   /*DHSOPR-4772- Address section*/
+   .address-box{
+    padding: 48px 40px;
+    background-color: #FAFAFA;
+    border-left: 8px solid #036;
+    margin-bottom: 48px;
+   }
+   .normal-body-text{
+    color: #313132;
+	font-family: BC Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; 
+	}
+	.no-margin{
+    margin: 0;
+    }
+   /*DHSOPR-4772*/
+  /********* for Progress Bar *******/
+  .slds-progress .slds-progress__list li{
+	position: relative;
+}
+.slds-progress .slds-progress__list li::before{
+position: absolute;
+top:20px;
+content: "";
+}
+.slds-progress .slds-progress__list li:nth-child(1):before{
+	content:"Information";
+	left: -28px;
+}
+.slds-progress .slds-progress__list li:nth-child(2):before{
+	content:"Address";
+	left: -17px;
+}
+.slds-progress .slds-progress__list li:nth-child(3):before{
+	content:"Communication";
+	left: -36px;
+}
+.slds-progress .slds-progress__list li:nth-child(4):before{
+	content:"Preferences";
+	left: -25px;
+}
+.slds-progress .slds-progress__list li:nth-child(5):before{
+	content:"Health";
+	left: -11px;
+}
+.slds-progress .slds-progress__list li:nth-child(6):before{
+	content:"Review";
+	left: -11px;
+}
+.slds-progress .slds-progress__list li .slds-progress__step-label{
+	display: none;
+}
+  
+  /********** for Mobile Validation ******/
+  /* runtime_omnistudio_ */
+  /* omnistudio-omniscript-telephone, omnistudio-omniscript-text[data-omni-key="postalCodeForPatient"],omnistudio-omniscript-text[data-omni-key="familyPostalCode"],omnistudio-omniscript-email{
+	overflow: hidden;
+  } */
+  omnistudio-omniscript-telephone[data-omni-key="mobilePhone"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-telephone[data-omni-key="familyMobPhone"] .slds-has-error .slds-form-element__help, 
+  omnistudio-omniscript-text[data-omni-key="postalCodeForPatient"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-text[data-omni-key="familyPostalCode"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-email[data-omni-key="emailForCare"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-email[data-omni-key="emailForFamilyMember"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-email[data-omni-key="email"] .slds-has-error .slds-form-element__help,
+  omnistudio-omniscript-email[data-omni-key="retypeEmail"] .slds-has-error .slds-form-element__help, 
+  omnistudio-omniscript-email[data-omni-key="retypeEmailForFamily"] .slds-has-error .slds-form-element__help{
+	position:relative;
+	text-indent: -1000px;
+	overflow: hidden;
+	}
+	
+	omnistudio-omniscript-telephone[data-omni-key="mobilePhone"] .slds-has-error .slds-form-element__help:before,
+	omnistudio-omniscript-telephone[data-omni-key="familyMobPhone"] .slds-has-error .slds-form-element__help:before{
+	position:absolute;
+	left:1000px;
+	content:"Phone number must be 10-digits.";
+	font-size: var(--lwc-fontSize2,0.75rem);
+	color:red;
+	}
+  
+	/********** For Postal Code *****/
+	omnistudio-omniscript-text[data-omni-key="postalCodeForPatient"] .slds-has-error .slds-form-element__help:before,
+	omnistudio-omniscript-text[data-omni-key="familyPostalCode"] .slds-has-error .slds-form-element__help:before{
+	  position:absolute;
+	  left:1000px;
+	  content:"Enter a valid B.C. postal code, for example, V1A 1A1.";
+	  font-size: var(--lwc-fontSize2,0.75rem);
+	  color:red;
+	  }
+  
+	  /************* Email *******/
+	  omnistudio-omniscript-email[data-omni-key="emailForCare"] .slds-has-error .slds-form-element__help:before,
+	  omnistudio-omniscript-email[data-omni-key="emailForFamilyMember"] .slds-has-error .slds-form-element__help:before,
+	  omnistudio-omniscript-email[data-omni-key="email"] .slds-has-error .slds-form-element__help:before,
+	  omnistudio-omniscript-email[data-omni-key="retypeEmail"] .slds-has-error .slds-form-element__help:before,
+	  omnistudio-omniscript-email[data-omni-key="retypeEmailForFamily"] .slds-has-error .slds-form-element__help:before{
+		position:absolute;
+		left:1000px;
+		content:"Enter a valid email address.";
+		font-size: var(--lwc-fontSize2,0.75rem);
+		color:red;
+		}
+		/********** to display the error message it was hiding because of languation suggetion in Prefrence section -Bug- 3122 ***/
+		omnistudio-omniscript-typeahead[data-omni-key="translatorLanguage"] .slds-has-error .slds-form-element__help{
+		  margin-top:16px;
+		  }
+		/********** to display the error message it was hiding because of languation suggetion in Prefrence section -Bug- 3472 ***/
+		omnistudio-omniscript-typeahead[data-omni-key="searchPractitioner"] .slds-has-error .slds-form-element__help{
+		  margin-top:16px;
+		  }
+		  
+		/******** For language dropdown*******/
+
+		omnistudio-omniscript-typeahead[data-omni-key="translatorLanguage"] .slds-dropdown-trigger_click.slds-is-open .slds-dropdown{
+			max-height:130px !important;
+			}
+			
+		/** to display prefrence error message**/
+		omnistudio-omniscript-radio[data-omni-key="decision"] .slds-has-error .slds-form-element__help{
+			position:relative;
+			text-indent: -1000px;
+			overflow: hidden;
+		}
+		
+		omnistudio-omniscript-radio[data-omni-key="decision"] .slds-has-error .slds-form-element__help:before{
+			 position:absolute;
+			 left:1000px;
+			 content:"Make a selection.";
+			 font-size: var(--lwc-fontSize2,0.75rem);
+			 color:red;
+		}
+		
+		/**Grey out for communication and address page**/
+		
+		.omni-read-only [data-omni-input] .slds-checkbox_faux, 
+		.omni-read-only [data-omni-input] .slds-radio_faux,
+		.omni-read-only [data-omni-input] input:not([type=range]):not([type=checkbox]):not([type=radio]),
+		.omni-read-only [data-omni-input] select, 
+		.omni-read-only [data-omni-input] textarea{
+			background-color: #f3f3f3;
+		}
+		  
+		@media screen and (min-width: 320px) and (max-width: 330px) { 
+		  .tooltipSection{
+			  width: 60px !important;
+		  }
+		}
+		@media screen and (min-width: 331px) and (max-width: 360px) { 
+		  .tooltipSection{
+			  width: 90px !important;
+		  }
+		}
+		@media screen and (min-width: 361px) and (max-width: 400px) { 
+		  .tooltipSection{
+			  width: 100px !important;
+		  }
+		}
+  
+  @media screen and (min-width: 401px) and (max-width: 480px) { 
+	.tooltipSection{
+		width: 120px !important;
+	}
+  }
+  @media screen and (min-width: 481px) and (max-width: 550px){ 
+  .tooltipSection{
+	width: 200px !important;
+	}
+  }
+  
+  omnistudio-omniscript-text-block[data-omni-key="TextBlock1"]{
+	height: auto !important;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px){ 
+	/********* global button to increase the width in tablate ******/
+	omnistudio-button.slds-medium-size_3-of-12{
+	  width:40%;
+	}
+	.omniscript-button-position{
+	  flex-direction: initial !important;
+	}
+	/*Alt phone ipad text*/
+	omnistudio-omniscript-text[data-omni-key="altPhoneInCare"] label.slds-form-element__label,
+	omnistudio-omniscript-text[data-omni-key="altPhone"] label.slds-form-element__label,
+	omnistudio-omniscript-text[data-omni-key="altFamilyPhone"] label.slds-form-element__label{
+		overflow: initial !important;
+	}
+  }
+  
+  /*DHSOPR-2491*/
+  
+	  .os-step-label{
+		  margin-top: 40px;
+	  }
+	  
+	  /*Headers and body*/
+	  /*spacing and typography*/
+	  
+	  .header-h1{
+		  font-size:37px !important;
+		  line-height:56px;
+		  margin-bottom: 32px !important;
+		  color: #313132;
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  font-weight: bold;
+	  }
+	  .body-text{
+		  font-size:16px !important;
+		  line-height:24px;
+		  margin-bottom: 48px !important;
+		  color: #313132;	
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+  
+	  }
+	  .header-h2{
+		  font-size:32px !important ;
+		  line-height:48px;
+		  margin-bottom: 32px !important;
+		  color: #313132;	
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  font-family: bold;
+	  }
+	  .body-text1{
+		  font-size:16px !important;
+		  line-height:24px;
+		  margin-bottom: 4px;
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  color: #313132;
+	  }
+	  .normal-body-text{
+		font-size:16px !important;
+		line-height:24px;
+		font-family: 'BC Sans' !important;
+		font-style: normal;
+		color: #313132;
+		margin-bottom: 0px !important;
+	  }
+	  .bold-text{
+		font-weight: bold;
+	  }
+	  .body-bold{
+		  font-size:16px !important ;
+		  line-height:24px;
+		  color: #313132;	
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  font-weight: 700;
+		  margin-bottom: 0px !important;
+	  }
+	  .body-text2{
+		  font-size:16px !important;
+		  line-height:24px;
+		  margin-bottom: 32px !important;
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  color: #313132;
+	  }
+	  
+	  .extra-margintop{
+		  margin-top:12px;
+	  }
+	  /*.extra-margintop2{
+		   margin-top: -8px; */
+	  }
+	  /* .extra-margintop3{
+		  margin-top: -24px;
+	  }
+	  .extra-margintop4{
+		  margin-top: -48px;
+	  }
+	  .extra-margintop5{
+		  margin-top: -36px;
+	  } */
+	  .extra-marginbottom1{
+		  margin-bottom:17px;
+	  }
+	  .extra-marginbottom2{
+		  margin-bottom:28px !important;
+	  }
+	  .extra-space1{
+		  margin-bottom:48px; /*mobile : 32px*/
+		  margin-top:17px;    /*mobile: 1px*/
+		  background:#A7A7A7;
+	  }
+	  .extra-space2{
+		  margin-bottom:48px; /*mobile : 32px*/
+		  margin-top:27px;    /*mobile: 1px*/
+		  background:#A7A7A7;
+	  }
+	  .extra-margintopspace{
+		  margin-bottom: 20px;	
+	  }
+	  .extra-margintopspace1{
+		  margin-bottom: 48px !important;	
+	  }
+	  
+	  .extra-space3{
+	  margin-bottom: 28px;
+	  margin-top: 32px;
+	  background: #A7A7A7;
+	  }
+	  .extra-space4{
+		  margin-bottom:28px; /*mobile : 32px*/
+		  margin-top:17px;    /*mobile: 1px*/
+		  background:#A7A7A7;
+	  }
+	  
+	  omnistudio-omniscript-select[data-omni-key="relationshipToCarePerson"]{
+		  /* margin-top: -8px; */
+	  }
+	  
+	  omnistudio-omniscript-text,omnistudio-omniscript-typeahead,omnistudio-omniscript-email,omnistudio-omniscript-telephone{
+		  margin-bottom: 32px !important;
+	  }
+	  omnistudio-omniscript-typeahead label{
+		margin-bottom: 8px;
+	  }
+	  omnistudio-omniscript-select{
+		  margin-bottom: 32px !important;
+	  }
+	  omnistudio-omniscript-checkbox{
+		  margin-bottom: 24px !important;
+	  }
+	  /*Information screen*/
+	  
+	  omnistudio-omniscript-text[data-omni-key="careGiverFullName"]{
+		  /* margin-top: -40px; */
+	  }
+	  omnistudio-omniscript-select[data-omni-key="relativeRole"]{
+		  /* margin-bottom:-12px !important; */
+	  }
+	  omnistudio-omniscript-text[data-omni-key="firstName"]{
+		  margin-top: 12px;
+	  }
+	  
+	  /*Address screen*/
+	  omnistudio-omniscript-typeahead-block[data-omni-key="StreetAddress-Block"]{
+		  /* margin-top: -8px; */
+	  }
+	  omnistudio-omniscript-text[data-omni-key="city"]{
+			  margin-top:26px !important
+	  }
+	  omnistudio-omniscript-text[data-omni-key="postalCodeForPatient"]{
+			  /* margin-top:-8px; */
+	  }
+	  omnistudio-omniscript-select[data-omni-key="province"]{
+		  margin-top:2px;
+	  }
+	  omnistudio-omniscript-navigate-action[data-omni-key="Cancel registrationAddress"]{
+		  margin-top:14px;
+		  margin-bottom: 30px;
+	  }
+	  /*Communication screen*/
+	  omnistudio-omniscript-text[data-omni-key="altPhoneInCare"],omnistudio-omniscript-text[data-omni-key="altPhone"],omnistudio-omniscript-text[data-omni-key="altFamilyPhone"]{
+		  /* margin-top: -9px; */
+	  }
+	  omnistudio-omniscript-text[data-omni-key="preferredName"]{
+		  /* margin-top: 11px; */
+	  }
+	  omnistudio-omniscript-text[data-omni-key="primaryContact"],omnistudio-omniscript-text[data-omni-key="primaryContactForFirstFamily"],omnistudio-omniscript-text[data-omni-key="primaryContactDisabled"],omnistudio-omniscript-text-block[data-omni-key="isPrimaryContactText"]{
+		  /* margin-top: -5px; */
+	  }
+	  omnistudio-omniscript-text-block[data-omni-key="isPrimaryContactText"]{
+		margin-top: -5px;
+	  }
+	  omnistudio-omniscript-email[data-omni-key="emailForCare"],omnistudio-omniscript-email[data-omni-key="email"],omnistudio-omniscript-email[data-omni-key="emailForFamilyMember"]{
+		  /* margin-top: -5px; */
+	  }
+	  
+	  /*Preference screen*/
+	  
+	  omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListed"],omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"],omnistudio-omniscript-checkbox[data-omni-key="isTranslatorLangNotListed"],omnistudio-omniscript-checkbox[data-omni-key="isLanguageNotListedForCare"]{
+		  /* margin-top: -32px; */
+	  }
+	  
+	  omnistudio-omniscript-text-block[data-omni-key="textForQuestionLastVisitDoctorSelfRegisterText"],omnistudio-omniscript-text-block[data-omni-key="textForQuestionLastVisitDoctorCareRegisterText"],omnistudio-omniscript-text-block[data-omni-key="textQuestionForTranslatorCareRegister"],omnistudio-omniscript-text-block[data-omni-key="textQuestionForTranslatorSelfRegister"],omnistudio-omniscript-text-block[data-omni-key="textForQuestionTravelCareRegister"]{
+		  /* margin-top: -10px; */
+	  }
+	  omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderSelfRegister"],omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderCareRegister"]{
+		  /* margin-top: -30px; */
+	  }
+	  omnistudio-omniscript-text[data-omni-key="practitionerNotListedComments"],omnistudio-omniscript-text[data-omni-key="translatorLangNotListedComments"]{
+		  margin-bottom:32px !important;
+		  /* margin-top: -17px; */
+	  }
+	  omnistudio-omniscript-text-block[data-omni-key="textForQuestion"],omnistudio-omniscript-text-block[data-omni-key="textForQuesReason"]{
+		  /* margin-top:-7px; */
+	  }
+	  omnistudio-omniscript-radio[data-omni-key="reasonForSearch"]{
+		  margin-bottom:18px;
+	  }
+	  /*omnistudio-omniscript-text[data-omni-key="otherReasonForPractitioner"]{
+		  margin-bottom: 2px !important;
+	  }*/
+	  omnistudio-omniscript-text-block[data-omni-key="textForQuestionTravelCareRegister"],omnistudio-omniscript-text-block[data-omni-key="textForQuestionTravelSelfRegister"]{
+		  /* margin-top:-24px; */
+	  }
+	  omnistudio-omniscript-select[data-omni-key="genderForPractitioner"]{
+		  /* margin-top:-22px; */
+	  }
+	  .slds-accordion__summary{
+		display: none;
+	 }
+	 
+	 omnistudio-omniscript-text-block{
+		margin-bottom: 0;
+	 }
+	  omnistudio-omniscript-checkbox[data-omni-key="isLanguageNotListedForCare"]..slds-checkbox .slds-checkbox__label .slds-form-element__label{
+		 margin-left: 0px !important;
+	 }
+	 .slds-accordion__section{
+		padding: 0;
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key = "isPrimaryContactText"]{
+		 margin-left: 20px !important;
+	 }
+	
+	 
+	 omnistudio-omniscript-block[data-omni-key = "reviewInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewAddress"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewPersonalInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewContactInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewPractitionerDetails"],
+	  omnistudio-omniscript-block[data-omni-key = "reviewHealthDetails"]
+	 {
+	padding-bottom: 48px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid #7A7A7A;
+	 }
+	 omnistudio-omniscript-block[data-omni-key = "reviewInformation"] .slds-accordion__summary,
+	 omnistudio-omniscript-block[data-omni-key = "reviewAddress"] .slds-accordion__summary,
+	 omnistudio-omniscript-block[data-omni-key = "reviewPersonalInformation"] .slds-accordion__summary,
+	 omnistudio-omniscript-block[data-omni-key = "reviewContactInformation"] .slds-accordion__summary,
+	 omnistudio-omniscript-block[data-omni-key = "reviewPractitionerDetails"] .slds-accordion__summary,
+	 omnistudio-omniscript-block[data-omni-key = "reviewHealthDetails"].slds-accordion__summary{
+		display: block;
+	 }
+	 
+	
+
+	  /*Review screen*/
+	  
+	  	  
+	  /*MEDIA QUERIES*/
+	  /*mobile*/
+	  @media only screen and (max-width: 767px){
+		omnistudio-omniscript-block[data-omni-key = "reviewInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewAddress"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewPersonalInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewContactInformation"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewPractitionerDetails"],
+	 omnistudio-omniscript-block[data-omni-key = "reviewHealthDetails"]{
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+	
+	 }
+		.siteforceContentArea .comm-layout-column:not(:empty) {
+			padding-top: 0;
+		}
+		.omni-block_content[omnistudio-omniscriptBlock_omniscriptBlock]{
+			padding-left:0 !important; 
+			padding-right: 0 !important;
+		  }
+		omnistudio-omniscript-text,omnistudio-omniscript-typeahead,omnistudio-omniscript-email,omnistudio-omniscript-telephone,
+		omnistudio-omniscript-checkbox,omnistudio-omniscript-select{
+			  margin-bottom: 24px !important;
+			  margin-top: 0;
+		  }
+		  omnistudio-omniscript-line-break{
+			display: none;
+		  }
+		  .omniscript-side-content{
+			margin-top: 0;
+		  }
+		  .omniscript-article[data-content-position='top']{
+			margin-top: 0 !important;
+		  }
+		  .os-step-label{
+			margin-top: 20px;
+		  }
+		  .omniscript-btn-previous{
+			margin-top: 10px;
+		  }
+		  .slds-card__body{
+			padding: 0;
+		  }
+		  .slds-card__body section{
+			padding-bottom: 0;
+			padding-top: 0;
+		  }
+		  .omniscript-step__body{
+			padding-bottom: 0;
+		  }
+		  .omniscript-article[data-content-position='top']{
+			border: none;
+		  }
+		  omnistudio-omniscript-block[data-omni-key="commonSection"],omnistudio-omniscript-block[data-omni-key="sectionForAddress"],
+		  omnistudio-omniscript-block[data-omni-key="sectionForComms"],omnistudio-omniscript-block[data-omni-key="patientHaveFamilyDoctor"]{
+			padding-right: 0;
+			/* padding-bottom: 24px; */
+		  }
+		  omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListed"], omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"], omnistudio-omniscript-checkbox[data-omni-key="isTranslatorLangNotListed"], omnistudio-omniscript-checkbox[data-omni-key="isLanguageNotListedForCare"]{
+			margin-top: 0;
+		  }
+		  .extra-space2{
+			margin-bottom: 19px;
+    margin-top: 33px;
+		  }
+		.omniscript-btn-next{
+			margin-top: 20px;
+		}
+
+		  fieldset{
+			padding-right: 0;
+		  }
+	  .header-h1{
+		  font-size:28px !important;
+		  line-height:40px;
+		  margin-bottom: 24px !important;
+		  color: #313132;
+	  }
+	  .body-text{
+		  font-size:16px;
+		  line-height:24px;
+		  margin-bottom: 32px !important;
+		  
+	  }
+	  .header-h2{
+		  font-size:24px !important;
+		  line-height:36px;
+		  margin-bottom: 16px !important;	
+	  }
+	  .header-h3{
+		font-size: 21px;
+		line-height: 32px;
+		margin-bottom: 16px !important;
+	  }
+	  .body-text2{
+		  font-size:16px !important;
+		  line-height:24px;
+		  margin-bottom: 24px !important;
+		  font-family: 'BC Sans' !important;
+		  font-style: normal;
+		  color: #313132;
+	  }
+	 
+	  .extra-margintop3{
+		margin-top: 0;
+	  }
+	  .extra-margintop{
+		  margin-top:4px;
+	  }
+	  
+	  .extra-margintop2{
+		  margin-top: -16px;
+	  }
+	  
+	  /*other field*/
+	  omnistudio-omniscript-text[data-omni-key="practitionerNotListedComments"],
+	  omnistudio-omniscript-text[data-omni-key="otherReasonForPractitioner"],
+	  omnistudio-omniscript-text[data-omni-key="translatorLangNotListedComments"]{
+		width: 75%;
+	  }
+	 omnistudio-omniscript-text[data-omni-key="careGiverFullName"],omnistudio-omniscript-text[data-omni-key="firstName"]{
+		margin-top: 0;
+	}
+	  /* omnistudio-omniscript-typeahead-block[data-omni-key="doctorNotOnList-Block"]{
+		margin-bottom: 40px !important;
+	  } */
+	  omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderSelfRegister"] p{
+		margin-bottom: 12px;
+	  }
+	  /*Address screen*/
+	  omnistudio-omniscript-typeahead-block[data-omni-key="StreetAddress-Block"]{
+		  margin-top: 0px;
+		  margin-bottom: 0 !important;
+	  }
+	  
+	  /*DHSOPR-4890, 4891*/
+	  
+	  .slds-p-right_small, .slds-p-right--small {
+		padding-right: 0px !important;
+	  }
+	  omnistudio-omniscript-text[data-omni-key="Day"],omnistudio-omniscript-text[data-omni-key="Month"]{
+			padding-right: var(--lwc-spacingSmall,0.75rem) !important;
+	  }
+	   /*DHSOPR-4890 4891*/
+	   
+	  
+	  
+	 /********* for communication section***/
+	 omnistudio-omniscript-block[data-omni-key="sectionForComms"] .header-h2{
+		margin-bottom: 0 !important;
+	 } 
+	 omnistudio-omniscript-block[data-omni-key="sectionForComms"] .extra-space1{
+		margin-bottom: 32px;
+    margin-top: 8px;
+	 }
+	 /****** for prefrence ***/
+	 /* omnistudio-omniscript-block[data-omni-key="patientHaveFamilyDoctor"] */
+	 /* omnistudio-omniscript-block[data-omni-key="patientHaveFamilyDoctor"] omnistudio-omniscript-text-block[data-omni-key="TextBlock11"]{
+		margin-top: -22px;
+	 } */
+	 omnistudio-omniscript-text-block[data-omni-key="textForQuestionLastVisitDoctorSelfRegisterText"]{
+		margin-top: 5px;
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key = "textForQuestionTravelSelfRegister"]{
+		/* margin-top: -30px; */
+	 }
+	 
+	 omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderSelfRegister"], omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderCareRegister"]{
+		
+		margin-bottom: 15px;
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key="OtherPractitioner"], omnistudio-omniscript-text[data-omni-key="practitionerNotListedComments"], omnistudio-omniscript-text[data-omni-key="translatorLangNotListedComments"]{
+		margin-bottom: 18px !important;
+    /* margin-top: -17px; */
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderSelfRegister"], omnistudio-omniscript-text-block[data-omni-key="textForQuestionGenderCareRegister"]{
+		margin-top: 0;
+	 }
+	 omnistudio-omniscript-typeahead[data-omni-key="doctorNotOnList"]{
+		margin-bottom: 40px !important;
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key="nameOfCurrentPractitioner"]{
+		margin-top: 16px;
+	 }
+	 omnistudio-omniscript-text-block[data-omni-key="textForQuestionTravelCareRegister"], omnistudio-omniscript-text-block[data-omni-key="textForQuestionTravelSelfRegister"]{
+		margin-top: 0px;
+    margin-bottom: 0;
+	 }
+	 omnistudio-omniscript-checkbox[data-omni-key="isPractiotionerNotListedForCare"] .slds-m-vertical_medium{
+		margin-top: 8px;
+		margin-bottom: 0;
+	 }
+	 omnistudio-omniscript-radio[data-omni-key="reasonForSearch"]{
+		margin-bottom: 18px;
+	 }
+	
+	 omnistudio-omniscript-block[data-omni-key="generalDetails"]{
+		padding-top: 0;
+	 }
+	 
+     /******** for progress bar ****/
+	 .slds-progress .slds-progress__list li::before{
+		display: none;
+	}
+	/*****for month, day and year ****/
+	  omnistudio-omniscript-text[data-omni-key="Month"],omnistudio-omniscript-text[data-omni-key="Day"],omnistudio-omniscript-text[data-omni-key="Year"]{
+		  width: 33%;
+	  }
+  }
+	  
+	  /*tablet*/
+	  @media screen and (min-width: 768px)and (max-width: 1023px){
+		omnistudio-omniscript-block[data-omni-key = "reviewInformation"],
+		omnistudio-omniscript-block[data-omni-key = "reviewAddress"],
+		omnistudio-omniscript-block[data-omni-key = "reviewPersonalInformation"],
+		omnistudio-omniscript-block[data-omni-key = "reviewContactInformation"],
+		omnistudio-omniscript-block[data-omni-key = "reviewPractitionerDetails"],
+		omnistudio-omniscript-block[data-omni-key = "reviewHealthDetails"]{
+	   padding-bottom: 32px;
+	   margin-bottom: 32px;
+	   
+		}
+		omnistudio-omniscript-text[data-omni-key="firstName"]{
+			margin-top:0;
+		}
+
+	  .header-h1{
+		  font-size:32px !important;
+		  line-height:48px;
+		  margin-bottom: 32px !important;
+	  }
+	  .body-text{
+		  font-size:16px;
+		  line-height:24px;
+		  margin-bottom: 48px;
+	  }
+	  .header-h2{
+		  font-size:28px !important;
+		  line-height:40px;
+		  margin-bottom: 32px !important;
+		  color: #313132;	
+	  }
+	  .extra-space1{
+		  margin-bottom:12px; 
+		  margin-top:17px;    /*mobile: 1px*/
+		  background:#A7A7A7;
+	  }
+	  .extra-space2{
+		  margin-bottom:48px; /*mobile : 32px*/
+		  margin-top:32px;    /*mobile: 1px*/
+		  background:#A7A7A7;
+	  }
+	  .extra-margintopspace{
+		  margin-bottom: 20px;	
+	  }
+	  .extra-margintopspace1{
+		  margin-bottom: 32px !important;	
+	  }
+	  
+	  .extra-space3{
+	  margin-bottom: 12px;
+	  margin-top: -16px;
+	  background: #A7A7A7;
+	  }
+	  }
+	  
+  /*Health*/
+  .slds-form-element__label{
+     margin-bottom: 12px !important;
+	}
+  .slds-show{
+		margin-bottom: 20px !important;
+	}
+   .slds-checkbox .slds-checkbox__label .slds-form-element__label{
+		margin-left: 20px !important;
+	}
+	.slds-form-element .slds-checkbox [type=checkbox]+.slds-checkbox_faux, 
+	.slds-form-element .slds-checkbox [type=checkbox]+.slds-checkbox--faux,
+	.slds-form-element .slds-checkbox [type=checkbox]~.slds-checkbox_faux, 
+	.slds-form-element .slds-checkbox [type=checkbox]~.slds-checkbox--faux, 
+	.slds-form-element .slds-checkbox [type=checkbox]+.slds-checkbox__label .slds-checkbox_faux,
+	.slds-form-element .slds-checkbox [type=checkbox]+.slds-checkbox__label .slds-checkbox--faux
+	{
+		margin-left: 20px !important;
+	}
+	/*Health*/
