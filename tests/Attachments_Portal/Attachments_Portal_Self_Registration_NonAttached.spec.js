@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { constants } from 'buffer';
 
-test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({page, browser }) => {
+test('Can_do_Self_Registration_for_NoN_Attached_in_Portal', async ({page, browser }) => {
   
   console.log("\n=====Devtools : enable Performance Metrics =====\n");
   //Create a new connection to an eisting CDPSession to enable Performance Mesurements
@@ -20,33 +20,27 @@ test('Can_do_Person_InCare_Registration_for_NoN_Attached_in_Portal', async ({pag
   //console.log(paintTiming)
   //////
   await page.getByRole('button', { name: 'Next' }).click();
-  await page.getByRole('button', { name: 'Register a person in my care' }).click();
-  await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
-  await page.getByText('Case manager').click();
-  await page.getByLabel('Your first and last name').click();
-  await page.getByLabel('Your first and last name').fill('Igor Emelyanov CAse MAnager');
-  await page.getByLabel('Your first and last name').press('ArrowLeft');
-  await page.getByLabel('Your first and last name').press('ArrowLeft');
-  await page.getByLabel('Your first and last name').press('ArrowLeft');
-  await page.getByLabel('Your first and last name').press('ArrowLeft');
-  await page.getByLabel('Your first and last name').click();
-  await page.getByLabel('Your first and last name').click();
+  await page.getByRole('button', { name: 'Register myself or my family' }).click();
   await page.getByLabel('First name', { exact: true }).click();
-  await page.getByLabel('First name', { exact: true }).click();
-  await page.getByLabel('First name', { exact: true }).fill('Kenton');
-  await page.getByLabel('Last name', { exact: true }).click();
-  await page.getByLabel('Last name', { exact: true }).fill('Troup');
+  await page.getByLabel('First name', { exact: true }).fill('Sandy');
+  await page.getByLabel('First name', { exact: true }).press('Tab');
+  await page.getByLabel('Last name, Last name must').press('Tab');
+  await page.getByLabel('Last name', { exact: true }).fill('Prior');
+  await page.getByLabel('Last name', { exact: true }).press('Tab');
+  await page.getByLabel('Personal Health Number (PHN), Each B.C. resident enrolled with the Medical').press('Tab');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
-  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010088');
+  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873010063');
   await page.getByPlaceholder('MM').click();
-  await page.getByPlaceholder('MM').fill('12');
-  await page.getByPlaceholder('DD').click();
-  await page.getByPlaceholder('DD').fill('05');
+  await page.getByPlaceholder('MM').fill('03');
+  await page.getByPlaceholder('MM').press('Tab');
+  await page.getByLabel('Day, Date of birth must match').press('Tab');
+  await page.getByPlaceholder('DD').fill('01');
   await page.getByPlaceholder('YYYY').click();
-  await page.getByPlaceholder('YYYY').fill('1959');
-  await page.getByPlaceholder('DD').click();
+  await page.getByPlaceholder('YYYY').fill('1975');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  await page.getByPlaceholder('DD').click();
   await page.getByRole('button', { name: 'Continue' }).click();
+  
 
   console.log("\n=====The Paint Timing =====\n");
   ///FCP - First Content Paint tracing
