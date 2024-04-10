@@ -14,8 +14,8 @@ const getSQLPatientId =  "https://healthbc--hlthbcqax.sandbox.my.salesforce.com/
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9gtjsZa8aaSUbjszB7_VsL_2u.UZJ4tEpAWLYoFtXEaHXhmhR0XEj21cuU53DRql2prIcFbAc4dm29Co0';
-const client_secret = '5C598651FEE76A184BCAD8F6BD7B26B304AD18D8FF622802DEA793600D21C918';
+const client_id = '3MVG9TZvGM_0NqB2vPdwrdEfeaPYQtQdiDkCZd2Oy3qsElj92yQjY01ZR70__SdVohYZLYI5367Fuixo6Xihy';
+const client_secret = '14BB6C6E0BDFAEA91E44B92A31BA7CA94BB717AA45AE72279533C0159F661DF7';
 
 
 test('API_Preconditionong_Removing_Dups_Kenton Troup', async ({request, baseURL}) => {
@@ -201,15 +201,25 @@ test('Can_Register_Person_InCare_Portal_on_iPhone11', async ({ page }, testInfo)
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
   await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(778) 879-1111_');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
-  await page.locator('[id="\\32 -410"]').getByText('Phone').click();
+  //await page.locator('[id="\\32 -410"]').getByText('Phone').click();
+  // AI Click on the "Phone" option
+  await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Phone"]');
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-2222_');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
-  await page.locator('#input107-513').click();
-  await page.locator('#input107-513').fill('Kurdecha FAmily Doctor');
-  await page.locator('#input111-523').click();
-  await page.locator('#input111-523').fill('Richmond');
+  // AI Click on the input component
+  await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
+  //await page.locator('#input107-513').click();
+  //AI Enter Provider preferences and enter "AI Kurdecha Selector"
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI Kurdecha Selector');
+  //await page.locator('#input107-513').fill('Kurdecha Family Doctor');
+  // AI Click on the input component
+  await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
+  //await page.locator('#input111-523').click();
+  // AI Enter City
+  await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Richmond');
+  //await page.locator('#input111-523').fill('Richmond');
   await page.locator('label').filter({ hasText: 'Current family doctor or nurse practitioner is retiring' }).locator('span').first().click();
   await page.locator('#comboboxId-550').click();
   await page.getByText('Less than 20 km').click();

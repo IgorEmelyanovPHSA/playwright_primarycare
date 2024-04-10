@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 
 test('Can_see_Clinic_Details_as_an_Director', async ({ page }) => {
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/providerclinicportal/s/');
-  await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/providerclinicportal/s/login/?ec=302&startURL=%2Fproviderclinicportal%2Fs%2F');
   await page.getByPlaceholder('Username').click();
   await page.getByPlaceholder('Username').fill('director6@phsa.ca.hlthbcqax');
   await page.getByPlaceholder('Password').click();
