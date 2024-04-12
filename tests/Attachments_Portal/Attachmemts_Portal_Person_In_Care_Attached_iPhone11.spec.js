@@ -221,13 +221,20 @@ test('Can_Register_Person_InCare_Portal_on_iPhone11', async ({ page }, testInfo)
   await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Richmond');
   //await page.locator('#input111-523').fill('Richmond');
   await page.locator('label').filter({ hasText: 'Current family doctor or nurse practitioner is retiring' }).locator('span').first().click();
-  await page.locator('#comboboxId-550').click();
+  // AI Enter "How far from Home"
+  await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] input');
+  //await page.locator('#comboboxId-550').click();
   await page.getByText('Less than 20 km').click();
-  await page.locator('#comboboxId-560').click();
+  // AI Enter "Gender"
+  await page.click('omnistudio-omniscript-select[data-omni-key="genderForPractitioner"] input');
+  //await page.locator('#comboboxId-560').click();
   await page.getByText('Female').click();
   await page.locator('fieldset').filter({ hasText: /^YesNo$/ }).locator('span').nth(1).click();
-  await page.locator('#inputId-578').click();
-  await page.locator('#inputId-578').fill('Polis');
+  // AI Enter "What Language"
+  await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
+  //await page.locator('#inputId-578').click();
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Polis');
+  //await page.locator('#inputId-578').fill('Polis');
   await page.getByText('Polish').click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.locator('label').filter({ hasText: 'Attachment to a family doctor' }).locator('span').first().click();

@@ -209,7 +209,9 @@ test('Can_do_Self_Registration_for_Attached_in_Portal', async ({page, browser })
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
- await page.locator('[id="\\32 -410"]').getByText('Phone').click();
+ // AI Click on the "Phone" option
+ await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Phone"]');
+ //await page.locator('[id="\\32 -410"]').getByText('Phone').click();
  await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-3822_');
  await page.getByRole('button', { name: 'Continue' }).click();
