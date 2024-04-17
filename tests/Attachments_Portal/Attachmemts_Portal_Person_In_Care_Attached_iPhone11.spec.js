@@ -237,7 +237,8 @@ test('Can_Register_Person_InCare_Portal_on_iPhone11', async ({ page }, testInfo)
   //await page.locator('#inputId-578').fill('Polis');
   await page.getByText('Polish').click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.locator('label').filter({ hasText: 'Attachment to a family doctor' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'Major surgery' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'Pregnancy or recent birth' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Submit registration' }).click();
