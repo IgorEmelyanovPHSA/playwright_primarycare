@@ -209,14 +209,21 @@ test('Can_do_Self_Registration_for_Attached_in_Portal', async ({page, browser })
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
  await page.getByRole('combobox', { name: 'Communication preference' }).click();
- await page.locator('[id="\\32 -410"]').getByText('Phone').click();
+ // AI Click on the "Phone" option
+ await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Phone"]');
+ //await page.locator('[id="\\32 -410"]').getByText('Phone').click();
  await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-3822_');
  await page.getByRole('button', { name: 'Continue' }).click();
  await page.getByRole('group').locator('label').filter({ hasText: 'No' }).locator('span').first().click();
  await page.getByRole('button', { name: 'Continue' }).click();
- await page.locator('div:nth-child(9) > .slds-checkbox__label > .slds-checkbox_faux').first().click();
- await page.locator('div:nth-child(18) > .slds-checkbox__label > .slds-checkbox_faux').click();
+ //await page.locator('div:nth-child(9) > .slds-checkbox__label > .slds-checkbox_faux').first().click();
+ //await page.locator('div:nth-child(18) > .slds-checkbox__label > .slds-checkbox_faux').click();
+ //AI
+ await page.locator('label').filter({ hasText: 'Major surgery' }).locator('span').first().click();
+ await page.locator('label').filter({ hasText: 'Pregnancy or recent birth' }).locator('span').first().click();
+ await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
+ //
  await page.getByRole('button', { name: 'Continue' }).click();
  await page.getByRole('button', { name: 'Submit registration' }).click();
  await page.getByText('Sandy Prior, you are now on').click();
