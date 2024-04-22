@@ -616,9 +616,9 @@ test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, b
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
     
-    //await page.getByText('Thank you, Heath Crippen is already registered.').click();
+    await page.getByText('Thank you, Heath Crippen is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
     /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
