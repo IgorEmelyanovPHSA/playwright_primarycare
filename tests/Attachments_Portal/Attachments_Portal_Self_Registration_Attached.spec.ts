@@ -221,7 +221,7 @@ test('Can_do_Self_Registration_for_Attached_in_Portal', async ({page, browser })
  //await page.locator('div:nth-child(18) > .slds-checkbox__label > .slds-checkbox_faux').click();
  //AI
  await page.locator('label').filter({ hasText: 'Major surgery' }).locator('span').first().click();
- await page.locator('label').filter({ hasText: 'Pregnancy or recent birth' }).locator('span').first().click();
+ await page.locator('label').filter({ hasText: 'I am pregnant or have recently given birth' }).locator('span').first().click();
  await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
  //
  await page.getByRole('button', { name: 'Continue' }).click();
