@@ -5,7 +5,7 @@ test('Can_see_Clinic_Details_as_an_Director', async ({ page }) => {
   await page.getByPlaceholder('Username').click();
   await page.getByPlaceholder('Username').fill('director6@phsa.ca.hlthbcqax');
   await page.getByPlaceholder('Password').click();
-  await page.getByPlaceholder('Password').fill('PAS@1234');
+  await page.getByPlaceholder('Password').fill('PAS@12345');
   await page.getByRole('button', { name: 'Log in' }).click();
   await page.getByLabel('Search all clinics in BC').click();
   await page.getByPlaceholder('Enter Clinic Name').click();
