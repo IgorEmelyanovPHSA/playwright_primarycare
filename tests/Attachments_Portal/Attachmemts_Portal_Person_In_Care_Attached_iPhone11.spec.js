@@ -14,13 +14,13 @@ const getSQLPatientId =  "https://healthbc--hlthbcqax.sandbox.my.salesforce.com/
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9TZvGM_0NqB2vPdwrdEfeaPYQtQdiDkCZd2Oy3qsElj92yQjY01ZR70__SdVohYZLYI5367Fuixo6Xihy';
-const client_secret = '14BB6C6E0BDFAEA91E44B92A31BA7CA94BB717AA45AE72279533C0159F661DF7';
+const client_id = '3MVG9TZvGM_0NqB0xBqRKt866vslzudFvPuIPQ_wUNscgftt_duegftJLgRjk4xJi3I3fp3gQx6A0hmrSldVv';
+const client_secret = '957E42B476204C143FD463732A9BEF16F511A6355231BD48EAE5FFDB745F090F';
 
 
 test('API_Preconditionong_Removing_Dups_Kenton Troup', async ({request, baseURL}) => {
   /////Pre Conditioning API Remove dups Kenton Trup
-  console.log("/*0.---Pre-Condition API Remove 'Kenton Trup' with the Case from SF --*/");
+  console.log("/*0.---Pre-Condition API Remove 'Kenton Troup' with the Case from SF --*/");
   //0.1. Just check that we can Establish connection and get token
   console.log("0.1 Just check that we can Establish connection and get token");
   const acc_token = await request.post(authServiceEndPoint, {
@@ -48,7 +48,7 @@ test('API_Preconditionong_Removing_Dups_Kenton Troup', async ({request, baseURL}
   
 
   //0.2 .find personContactID.select 
-  console.log("\n0.2. Select PersonContactID 'Kenton Trup' from Account.");
+  console.log("\n0.2. Select PersonContactID 'Kenton Troup' from Account.");
   const personContactID = await request.get(getSQLPersonContactId, {
     form:{
       //grant_type : "bearer",
@@ -238,7 +238,7 @@ test('Can_Register_Person_InCare_Portal_on_iPhone11', async ({ page }, testInfo)
   await page.getByText('Polish').click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.locator('label').filter({ hasText: 'Major surgery' }).locator('span').first().click();
-  await page.locator('label').filter({ hasText: 'Pregnancy or recent birth' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'I am pregnant or have recently given birth' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Submit registration' }).click();
