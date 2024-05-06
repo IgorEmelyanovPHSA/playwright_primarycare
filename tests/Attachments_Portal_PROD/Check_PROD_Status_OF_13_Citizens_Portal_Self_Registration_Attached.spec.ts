@@ -910,7 +910,7 @@ test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, bro
     */
    }); 
 
-test('Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page, browser }) => {
+test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page, browser }) => {
     await page.goto('https://hcr.healthlinkbc.ca/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -1011,7 +1011,7 @@ test('Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page, br
    
    }); 
 
-test('Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({page, browser }) => {
+test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({page, browser }) => {
     await page.goto('https://hcr.healthlinkbc.ca/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
