@@ -941,7 +941,7 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     await page.getByRole('combobox', { name: 'Province' }).click();
     await page.getByText('BC', { exact: true }).click();
     await page.getByRole('textbox', { name: 'Postal code' }).click();
-    await page.getByRole('textbox', { name: 'Postal code' }).fill('V6Y 1A3_');
+    await page.getByRole('textbox', { name: 'Postal code' }).fill('V6Y 1A3');
     await page.getByRole('textbox', { name: 'City' }).click();
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
@@ -1042,7 +1042,7 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     await page.getByRole('combobox', { name: 'Province' }).click();
     await page.getByText('BC', { exact: true }).click();
     await page.getByRole('textbox', { name: 'Postal code' }).click();
-    await page.getByRole('textbox', { name: 'Postal code' }).fill('V6Y 1A3_');
+    await page.getByRole('textbox', { name: 'Postal code' }).fill('V6Y 1A3');
     await page.getByRole('textbox', { name: 'City' }).click();
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
