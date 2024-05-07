@@ -333,11 +333,12 @@ test('Can_do_Family_Registration_Attached_in_Portal', async ({page}) => {
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-2222');
   await page.getByRole('button', { name: 'Continue' }).click();
-  //What is your most recent family doctor?
+  //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'No' }).locator('span').first().click();
+  //What is your most recent family doctor?
   await page.click('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input');
   //await page.locator('#input111-519').click();
-  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI Kurdecha Family Doctor Selector');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI Kurdecha most Recent Family Doctor Selector');
   //await page.locator('#input111-519').fill('Kurdecha Family Doctor');
   await page.click('omnistudio-omniscript-text[data-omni-key="lastPractitionerVisit"] input');
   //await page.locator('#input115-535').click();
@@ -389,32 +390,37 @@ test('Can_do_Family_Registration_Attached_in_Portal', async ({page}) => {
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('Violline Prefferd NAme');
+  await page.getByLabel('Preferred name (optional)').fill('Violline Prefferd Name - Mom of Sandy');
   await page.getByRole('button', { name: 'Continue' }).click();
+  //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
-  await page.locator('#input235-1294').click();
-  await page.locator('#input235-1294').fill('Kurdecha FAmily Doctor');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowLeft');
-  await page.locator('#input235-1294').press('ArrowRight');
-  await page.locator('#input235-1294').fill('Kurdecha Family Doctor');
-  await page.locator('#input239-1304').click();
-  await page.locator('#input239-1304').fill('Fleetwood');
+  //What is the name of your current family doctor or nurse practitioner?
+  await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI Kurdecha Current Family Doctor Selector');
+  //await page.locator('#input235-1294').click();
+  //await page.locator('#input235-1294').fill('Kurdecha Current Family Doctor');
+  //Which town or city is your current family doctor or nurse practitioner located in?
+  await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Fleetwood');
+  //await page.locator('#input239-1304').click();
+  //await page.locator('#input239-1304').fill('Fleetwood');
+  //Why are you looking for a family doctor or nurse practitioner?
   await page.locator('label').filter({ hasText: 'Current family doctor or nurse practitioner is moving out of town or city' }).locator('span').first().click();
-  await page.locator('#comboboxId-1331').click();
-  await page.getByText('Less than 20 km').click();
+  //How far from your home are you able to travel to see a family doctor or nurse practitioner?
+  await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] input');
+  await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] .slds-listbox__option[data-value="Less than 20 km"]');
+  //await page.locator('#comboboxId-1331').click();
+  //await page.getByText('Less than 20 km').click();
+  //Do you need a translator?
   await page.locator('fieldset').filter({ hasText: /^YesNo$/ }).locator('span').nth(1).click();
-  await page.locator('#inputId-1359').click();
-  await page.locator('#inputId-1359').fill('Portu');
-  await page.getByText('Portuguese').click();
+  //In what language do you need a translator?
+  await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'canton');
+  //await page.locator('#inputId-1359').click();
+  //await page.locator('#inputId-1359').fill('canton');
+  await page.getByText('Cantonese').click();
   await page.getByRole('button', { name: 'Continue' }).click();
+  //Health Questionary
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
