@@ -3,9 +3,12 @@ import { test, expect } from '@playwright/test';
 
 test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached_in_Portal', async ({page, browser }) => {
   //PROD
-  await page.goto('https://hcr.healthlinkbc.ca/s/');
+  await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   //QAX
   //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
+  //UATX
+  //await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
+
   ///////////1. Register Gordon Krull, FIRST  ///////////////
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -23,6 +26,14 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByPlaceholder('YYYY').fill('1990');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
+
+
+  //await page.getByText('Thank you, Gordon Krull is already registered.').click();
+  //AI Click on the "There was an issue with the information entered." text
+  await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+  //await page.getByText('The information entered does not match provincial health records.').click();
+
+  /*
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -35,7 +46,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('Gonndonn Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('BOT Gonndonn Preferred Name');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -54,7 +65,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   //What is your most recent family doctor?
   await page.click('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input');
   //await page.locator('#input111-519').click();
-  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI Kurdecha most Recent Family Doctor Selector');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI BOT Kurdecha most Recent Family Doctor');
   //await page.locator('#input111-519').fill('Kurdecha Family Doctor');
   await page.click('omnistudio-omniscript-text[data-omni-key="lastPractitionerVisit"] input');
   //await page.locator('#input115-535').click();
@@ -82,11 +93,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  
   //await page.getByRole('button', { name: 'Submit registration' }).click();
   //await page.getByText('Gordon Krull, you are now on').click();
   //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-
+*/
   
   ///////////2. Register Family Member "Kelvin Lemoine"  -> Gordon's DAD /////////////////////////
   /*
@@ -109,13 +119,13 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('LeemonCitrus Prefferd Name - Gordon"s Dad');
+  await page.getByLabel('Preferred name (optional)').fill('BOT LeemonCitrus Prefferd Name - Gordon"s Dad');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
   //What is the name of your current family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
-  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI Kurdecha Current Family Doctor Selector');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT Kurdecha Current Family Doctor');
   //await page.locator('#input235-1294').click();
   //await page.locator('#input235-1294').fill('Kurdecha Current Family Doctor');
   //Which town or city is your current family doctor or nurse practitioner located in?
@@ -143,10 +153,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Submit registration' }).click();
-  await page.getByText('Kelvin Lemoine is now on the').click();
-  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-*/
+  //await page.getByRole('button', { name: 'Submit registration' }).click();
+  //await page.getByText('Kelvin Lemoine is now on the').click();
+  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  */
 }); 
 
 

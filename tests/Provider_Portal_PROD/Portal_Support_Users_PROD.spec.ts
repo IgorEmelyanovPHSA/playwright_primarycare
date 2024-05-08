@@ -25,14 +25,14 @@ test('Can_see_Clinic_Details_as_an_TIER1', async ({page, browser }) => {
     */
 });
    
-test('Can_see_Clinic_Details_as_an_MOA_Nolan Gary', async ({page, browser }) => {
+test('Can_see_Clinic_Details_as_an_MOA_Nolan_Gary', async ({page, browser }) => {
     /*
     await page.goto('https://bchealthprovider.ca');
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('nolan@mail.com.moa');
     await page.locator('#sfdc_password_container div').click();
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
-    await page.getByPlaceholder('Password').fill('PROV@1234');
+    await page.getByPlaceholder('Password').fill('PROV@12345');
     ///if user is not Activated yet after Refreshments.
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.getByLabel('Search all clinics in BC').click();
@@ -40,12 +40,12 @@ test('Can_see_Clinic_Details_as_an_MOA_Nolan Gary', async ({page, browser }) => 
     await page.getByPlaceholder('Enter Clinic Name').click();
     await page.getByPlaceholder('Enter Clinic Name').fill('cast');
     await page.getByRole('button', { name: 'Search' }).click();
-    await page.getByText('CASTLEGAR MED ASSOCIATES').click();
+    await page.getByText('Castlegar Medical Clinic Kinnaird Office').click();
     // Navigate and wait for element
     /////await page.goto('https://example.com');
     await page.getByText('Clinic Details').waitFor();
     await page.getByRole('tab', { name: 'Clinic Details' }).click();
-    await page.getByText('839 Appartment 9674-Clearwater ST NW').first().click();
+    await page.getByText('1840 8 Avenue').first().click();
     */
 });
 

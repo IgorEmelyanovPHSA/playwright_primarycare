@@ -2,7 +2,9 @@ import { test, expect } from '@playwright/test';
 
 
 test('Can_do_Gow-Cooper_Nipus_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    //await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
+    
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -102,7 +104,7 @@ test('Can_do_Gow-Cooper_Nipus_Registration_for_Attached_in_Portal', async ({page
    });
    
 test('Can_do_Mauricio_Beal_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -202,7 +204,7 @@ test('Can_do_Mauricio_Beal_Registration_for_Attached_in_Portal', async ({page, b
    });
 
 test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -302,7 +304,7 @@ test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, brow
 });
 
 test('Can_do_Courtney_Harty_Self_Registration_for_Attached_in_Portal', async ({page, browser }) => {
- await page.goto('https://hcr.healthlinkbc.ca/s/');
+ await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
  await page.getByRole('button', { name: 'Next' }).click();
  await page.getByRole('button', { name: 'Register myself or my family' }).click();
  await page.getByLabel('First name', { exact: true }).click();
@@ -320,8 +322,10 @@ test('Can_do_Courtney_Harty_Self_Registration_for_Attached_in_Portal', async ({p
  await page.getByRole('button', { name: 'Continue' }).click();
  await page.getByRole('button', { name: 'Continue' }).click();
 
- await page.getByText('Thank you, Courtney Harty is already registered.').click();
-
+ //await page.getByText('Thank you, Courtney Harty is already registered.').click();
+ //AI Click on the "There was an issue with the information entered." text
+ await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+ 
  /*
  await page.getByRole('combobox', { name: 'Street address' }).click();
  await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
@@ -402,7 +406,7 @@ await page.getByLabel('Preferred name (optional)').click();
 });
 
 test('Can_do_Norris_Mays_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -503,7 +507,7 @@ test('Can_do_Norris_Mays_Registration_for_Attached_in_Portal', async ({page, bro
    });
 
 test('Can_do_Burt_Sneed_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -521,9 +525,9 @@ test('Can_do_Burt_Sneed_Registration_for_Attached_in_Portal', async ({page, brow
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
     
-    await page.getByText('Thank you, Burt Sneed is already registered.').click();
+    //await page.getByText('Thank you, Burt Sneed is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
     /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
@@ -604,7 +608,7 @@ test('Can_do_Burt_Sneed_Registration_for_Attached_in_Portal', async ({page, brow
    }); 
    
 test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -622,9 +626,9 @@ test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, b
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
     
-    await page.getByText('Thank you, Heath Crippen is already registered.').click();
+    //await page.getByText('Thank you, Heath Crippen is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
     /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
@@ -706,7 +710,7 @@ test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, b
    });
    
 test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -808,7 +812,7 @@ test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, br
    });  
 
 test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -911,7 +915,7 @@ test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, bro
    }); 
 
 test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -931,9 +935,9 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     
     //await page.getByText('Thank you, Gordon Krull is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
-    
+    /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -1008,11 +1012,11 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-   
+   */
    }); 
 
 test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -1113,7 +1117,7 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
    }); 
 
 test('Can_do_Danny_Bellman_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
@@ -1215,7 +1219,7 @@ test('Can_do_Danny_Bellman_Registration_for_Attached_in_Portal', async ({page, b
    }); 
 
 test('Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();

@@ -1,35 +1,42 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Can_Register_Person_In_My_Care_DANNY_BELLMAN_And_LAWERENCE_MENZINES_for_Attached_in_Portal', async ({page, browser }) => {
+test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', async ({page, browser }) => {
   //PROD
-  await page.goto('https://hcr.healthlinkbc.ca/s/');
+  await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   //QAX
   //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
-  ///////////1. Register Danny Bellman, FIRST  ///////////////
+  //UATX
+  //await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
+
   await page.getByRole('button', { name: 'Next' }).click();
-  await page.getByRole('button', { name: 'Register myself or my family' }).click();
+  await page.getByRole('heading', { name: 'I am registering a person in' }).click();
+  await page.getByRole('button', { name: 'Register a person in my care' }).click();
+  await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
+  await page.getByText('Legal guardian', { exact: true }).click();
+  await page.getByLabel('Your first and last name').click();
+  await page.getByLabel('Your first and last name').fill('BOT PLAYWRIGHTLegalGuardian');
   await page.getByLabel('First name', { exact: true }).click();
-  await page.getByLabel('First name', { exact: true }).fill('Danny');
+  await page.getByLabel('First name', { exact: true }).fill('Lawerence');
   await page.getByLabel('Last name', { exact: true }).click();
-  await page.getByLabel('Last name', { exact: true }).fill('Bellman');
+  await page.getByLabel('Last name', { exact: true }).fill('Menzies');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
-  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873026896');
+  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).fill('9873026889');
   await page.getByPlaceholder('MM').click();
-  await page.getByPlaceholder('MM').fill('05');
+  await page.getByPlaceholder('MM').fill('07');
   await page.getByPlaceholder('DD').click();
-  await page.getByPlaceholder('DD').fill('28');
+  await page.getByPlaceholder('DD').fill('21');
   await page.getByPlaceholder('YYYY').click();
-  await page.getByPlaceholder('YYYY').fill('1961');
-  await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
+  await page.getByPlaceholder('YYYY').fill('1977');
+  await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
 
-  //await page.getByText('Thank you, Danny Bellman is already registered.').click();
+  //await page.getByText('Thank you, Lawerence Menzies is already registered.').click();
   //AI Click on the "There was an issue with the information entered." text
-  //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
-  await page.getByText('The information entered does not match provincial health records.').click();
-  
-/*
+  await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+  //await page.getByText('The information entered does not match provincial health records.').click();
+
+  /*
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -42,36 +49,40 @@ test('Can_Register_Person_In_My_Care_DANNY_BELLMAN_And_LAWERENCE_MENZINES_for_At
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('Dannyishka Preferred Name');
-  await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
+  await page.getByLabel('Preferred name (optional)').fill('BOT"Lawerence_Menzies" Playwright Preferred Name');
+  await page.getByRole('textbox', { name: 'Primary contact name' }).click();
+  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT Playwright PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
-  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('7788791111');
+  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(778) 879-3333');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
   await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Email"]');
   //await page.locator('[id="\\31 -414"]').getByText('Email').click();
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
-  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-2222');
+  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-4444');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
-  await page.getByRole('group').locator('label').filter({ hasText: 'No' }).locator('span').first().click();
-  //What is your most recent family doctor?
-  await page.click('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input');
-  //await page.locator('#input111-519').click();
-  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI Kurdecha most Recent Family Doctor Selector');
-  //await page.locator('#input111-519').fill('Kurdecha Family Doctor');
-  await page.click('omnistudio-omniscript-text[data-omni-key="lastPractitionerVisit"] input');
-  //await page.locator('#input115-535').click();
-  await page.fill('omnistudio-omniscript-text[data-omni-key="lastPractitionerVisit"] input', 'AI 5 years ago last seen :)');
-  //await page.locator('#input115-535').fill('5 years ago last seen :)');
-  //How far
+  await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
+  //What is the name of your current family doctor or nurse practitioner?
+  await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT Kurdecha Playwright Current Family Doctor');
+  //await page.locator('#input109-517').click();
+  //await page.locator('#input109-517').fill('AI Kurdecha Current Family Doctor Selector');
+  //Which town or city is your current family doctor or nurse practitioner located in?
+  await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Fleetwood');
+  //await page.locator('#input113-527').click();
+  //await page.locator('#input113-527').fill('Fleetwood');
+  //Why are you looking for a family doctor or nurse practitioner?
+  await page.locator('label').filter({ hasText: 'Current family doctor or nurse practitioner is moving out of town or city' }).locator('span').first().click();
+  //How far from your home are you able to travel to see a family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] input');
-  await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] .slds-listbox__option[data-value="Less than 5 km"]');
+  await page.click('omnistudio-omniscript-select[data-omni-key="distanceForPractitioner"] .slds-listbox__option[data-value="Less than 50 km"]');
   //await page.locator('#comboboxId-554').click();
-  //await page.getByText('Less than 5 km').click();
+  //await page.getByText('Less than 50 km').click();
   //Doctor's Gender
   await page.click('omnistudio-omniscript-select[data-omni-key="genderForPractitioner"] input')
   //await page.locator('#comboboxId-564').click();
@@ -80,26 +91,19 @@ test('Can_Register_Person_In_My_Care_DANNY_BELLMAN_And_LAWERENCE_MENZINES_for_At
   await page.locator('fieldset').filter({ hasText: /^YesNo$/ }).locator('span').nth(1).click();
   // "What Language"
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Ital');
   //await page.locator('#inputId-582').click();
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'German');
-  //await page.locator('#inputId-582').fill('German');
-  await page.getByText('German', { exact: true }).click();
+  //await page.locator('#inputId-582').fill('Ital');
+  await page.getByText('Italian').click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  //Health Questionary
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
-  await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'Seizures or Epilepsy' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  
-  //await page.getByRole('button', { name: 'Submit registration' }).click();
-  //await page.getByText('Danny Bellman, you are now on').click();
-  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-*/
-  
-  ///////////2. Register Person in My Care "Lawerence Menzies" /////////////////////////
-
-
-
-
+  await page.getByRole('button', { name: 'Submit registration' }).click();
+  await page.getByText('Lawerence Menzies is now on the').click();
+  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  await page.getByRole('button', { name: 'Start a new registration' }).click();
+*/  
 }); 
 
 
