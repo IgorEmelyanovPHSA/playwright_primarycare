@@ -18,7 +18,7 @@ const client_id = '3MVG9TZvGM_0NqB0xBqRKt866vslzudFvPuIPQ_wUNscgftt_duegftJLgRjk
 const client_secret = '957E42B476204C143FD463732A9BEF16F511A6355231BD48EAE5FFDB745F090F';
 
 
-test('API_Preconditionong_Removing_Dups_Kenton Troup', async ({request, baseURL}) => {
+test('API_Preconditioning_Removing_Dups_Kenton Troup', async ({request, baseURL}) => {
   /////Pre Conditioning API Remove dups Kenton Trup
   console.log("/*0.---Pre-Condition API Remove 'Kenton Troup' with the Case from SF --*/");
   //0.1. Just check that we can Establish connection and get token
@@ -155,7 +155,7 @@ test('API_Preconditionong_Removing_Dups_Kenton Troup', async ({request, baseURL}
 });
 
 
-test('Can_Register_Person_InCare_Portal_on_iPhone11', async ({ page }, testInfo) => {
+test('iPhone11_Can_Register_Person_InCare_Portal', async ({ page }, testInfo) => {
   console.log("Default timeout is: " +testInfo.timeout);
   //test.setTimeout(80000);
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');

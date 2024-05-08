@@ -12,7 +12,7 @@ const client_id = '3MVG9TZvGM_0NqB0xBqRKt866vslzudFvPuIPQ_wUNscgftt_duegftJLgRjk
 const client_secret = '957E42B476204C143FD463732A9BEF16F511A6355231BD48EAE5FFDB745F090F';
 
 
-test('API_Preconditionong_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
+test('API_Preconditioning_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
   /////Pre Conditioning API Remove dups Sandy Prior
   console.log("/*0.---Pre-Condition API Remove 'Sandy Prior' with the Case from SF --*/");
   //0.1. Just check that we can Establish connection and get token
