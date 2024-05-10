@@ -7,8 +7,9 @@ import { ai } from '@zerostep/playwright';
     await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/')
     //ZeroStep Account usage expided - Current Cycle Usage 500 requests.
     //await ai('Maximize the page', { page, test })
-    //await ai('Scroll down to very end of the same page', { page, test })
-    //await ai('Scroll down to very end of the same page', { page, test })
+    await ai('Scroll down to very end of the same page', { page, test })
+    await ai('Scroll down to very end of the same page', { page, test })
+    await ai('Scroll down to very end of the same page', { page, test })
     //await ai('Click the "Next" button on the same page', { page, test })
     //await ai('Scroll down to very end of the same page', { page, test })
     //await ai('Scroll down to very end of the same page', { page, test })
