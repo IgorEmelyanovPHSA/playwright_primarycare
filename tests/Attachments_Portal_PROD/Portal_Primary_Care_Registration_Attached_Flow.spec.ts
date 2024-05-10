@@ -49,7 +49,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT"Lawerence_Menzies" Playwright Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE "Lawerence_Menzies" Playwright Preferred Name');
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
   await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT Playwright PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
@@ -68,7 +68,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
   //What is the name of your current family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
-  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT Kurdecha Playwright Current Family Doctor');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha Playwright Current Family Doctor');
   //await page.locator('#input109-517').click();
   //await page.locator('#input109-517').fill('AI Kurdecha Current Family Doctor Selector');
   //Which town or city is your current family doctor or nurse practitioner located in?

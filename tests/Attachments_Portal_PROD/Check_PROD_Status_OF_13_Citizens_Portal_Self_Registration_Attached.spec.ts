@@ -935,9 +935,9 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     
     //await page.getByText('Thank you, Gordon Krull is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
-    /*
+    
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -950,12 +950,12 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByLabel('Preferred name (optional)').click();
-    await page.getByLabel('Preferred name (optional)').fill('"Gordon_Krull" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Gordon_Krull" Playwright Preferred Name');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowRight');
-    await page.getByLabel('Preferred name (optional)').fill('"Gordon_Krull" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Gordon_Krull" Playwright Preferred Name');
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -977,8 +977,8 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     // AI Click on the input component
     await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
     //await page.locator('#input107-513').click();
-    //AI Enter Provider preferences and enter "AI Kurdecha Selector"
-    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI for "Gordon_Krull" Kurdecha Selector');
+    //AI Enter Provider preferences and enter "AI BOT DO NOT USE Kurdecha Selector"
+    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE for "Gordon_Krull" Kurdecha Selector');
     //await page.locator('#input107-513').fill('Kurdecha Family Doctor');
     // AI Click on the input component
     await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
@@ -1012,7 +1012,7 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-   */
+   
    }); 
 
 test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({page, browser }) => {
@@ -1036,9 +1036,9 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     
     //await page.getByText('Thank you, Kelvin Lemoine is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
-    
+    /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -1051,12 +1051,12 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByLabel('Preferred name (optional)').click();
-    await page.getByLabel('Preferred name (optional)').fill('"Kelvin_Lemoine" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Kelvin_Lemoine" Playwright Preferred Name');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowRight');
-    await page.getByLabel('Preferred name (optional)').fill('"Kelvin_Lemoine" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Kelvin_Lemoine" Playwright Preferred Name');
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -1079,7 +1079,7 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
     //await page.locator('#input107-513').click();
     //AI Enter Provider preferences and enter "AI Kurdecha Selector"
-    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI for "Kelvin_Lemoine" Kurdecha Selector');
+    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE for "Kelvin_Lemoine" Kurdecha Selector');
     //await page.locator('#input107-513').fill('Kurdecha Family Doctor');
     // AI Click on the input component
     await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
@@ -1113,7 +1113,7 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-   
+   */
    }); 
 
 test('Can_do_Danny_Bellman_Registration_for_Attached_in_Portal', async ({page, browser }) => {
@@ -1218,7 +1218,7 @@ test('Can_do_Danny_Bellman_Registration_for_Attached_in_Portal', async ({page, b
    */
    }); 
 
-test('Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async ({page, browser }) => {
+test('BOT_Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async ({page, browser }) => {
     await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -1254,12 +1254,12 @@ test('Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async ({pag
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByLabel('Preferred name (optional)').click();
-    await page.getByLabel('Preferred name (optional)').fill('"Lawerence_Menzies" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Lawerence_Menzies" Playwright Preferred Name');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowRight');
-    await page.getByLabel('Preferred name (optional)').fill('"Lawerence_Menzies" Playwright Preferred Name');
+    await page.getByLabel('Preferred name (optional)').fill('AI BOT DO NOT USE "Lawerence_Menzies" Playwright Preferred Name');
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -1282,7 +1282,7 @@ test('Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async ({pag
     await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
     //await page.locator('#input107-513').click();
     //AI Enter Provider preferences and enter "AI Kurdecha Selector"
-    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI for "Lawerence_Menzies" Kurdecha Selector');
+    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE for "Lawerence_Menzies" Kurdecha Selector');
     //await page.locator('#input107-513').fill('Kurdecha Family Doctor');
     // AI Click on the input component
     await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
