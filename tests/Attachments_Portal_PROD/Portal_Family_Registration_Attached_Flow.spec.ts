@@ -30,10 +30,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
 
   //await page.getByText('Thank you, Gordon Krull is already registered.').click();
   //AI Click on the "There was an issue with the information entered." text
-  await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+  //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
   //await page.getByText('The information entered does not match provincial health records.').click();
 
-  /*
+  
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -96,7 +96,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   //await page.getByRole('button', { name: 'Submit registration' }).click();
   //await page.getByText('Gordon Krull, you are now on').click();
   //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-*/
+
   
   ///////////2. Register Family Member "Kelvin Lemoine"  -> Gordon's DAD /////////////////////////
   /*
