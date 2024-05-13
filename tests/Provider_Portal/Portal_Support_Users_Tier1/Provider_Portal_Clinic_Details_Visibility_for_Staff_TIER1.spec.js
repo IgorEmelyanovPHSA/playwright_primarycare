@@ -28,7 +28,7 @@ test('Can_see_Clinic_Details_as_an_TIER1', async ({page}) => {
   await page.getByPlaceholder('Username').fill('igor.tier1@phsa.ca.hlthbcqax');
   await page.locator('#sfdc_password_container div').click();
   await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
-  await page.getByPlaceholder('Password').fill('PAS@12345');
+  await page.getByPlaceholder('Password').fill('PAS@1234');
   ///if user is not Activated yet after Refreshments.
   await page.getByRole('button', { name: 'Log in' }).click();
   await page.getByLabel('Search all clinics in BC').click();
