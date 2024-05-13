@@ -12,11 +12,11 @@ const getSQLPatientId_Hollis =  "https://healthbc--hlthbcqax.sandbox.my.salesfor
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9TZvGM_0NqB0xBqRKt866vslzudFvPuIPQ_wUNscgftt_duegftJLgRjk4xJi3I3fp3gQx6A0hmrSldVv';
-const client_secret = '957E42B476204C143FD463732A9BEF16F511A6355231BD48EAE5FFDB745F090F';
+const client_id = '3MVG9696SH3dTknIUqL6kGaB93DDDc6O7qvq.JZ7kcg7thJVDGoOSVLyW8jzmjBPyeITIUJjLbkC2DWngWH.f';
+const client_secret = 'B3D6AF51AEFC7C9088E75887FD0C854BF43B32925EDD010074AFCDDA822591BA';
 
 
-test('API_Preconditionong_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
+test('API_Preconditioning_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
   /////Pre Conditioning API Remove dups Sandy Prior
   console.log("/*0.---Pre-Condition API Remove 'Sandy Prior' with the Case from SF --*/");
   //0.1. Just check that we can Establish connection and get token
@@ -152,7 +152,7 @@ test('API_Preconditionong_Removing_Dups_Sandy_Prior', async ({request, baseURL})
   
 });
 
-test('API_Preconditionong_Removing_Dups_Hollis_Violette', async ({request, baseURL}) => {
+test('API_Preconditioning_Removing_Dups_Hollis_Violette', async ({request, baseURL}) => {
   /////Pre Conditioning API Remove dups Hollis Violette
   console.log("/*0.---Pre-Condition API Remove 'Hollis Violette' with the Case from SF --*/");
   //0.1. Just check that we can Establish connection and get token
@@ -288,7 +288,7 @@ test('API_Preconditionong_Removing_Dups_Hollis_Violette', async ({request, baseU
   
 });
 
-test('Can_do_Family_Registration_Attached_in_Portal', async ({page}) => {
+test('Can_do_Family_Registration_SANDY_PRIOR_And_HOLLIS_VIOLETTE_Attached_in_Portal', async ({page}) => {
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   ///////////1. Register Sandy Prior, FIRST  ///////////////
   await page.getByRole('button', { name: 'Next' }).click();
