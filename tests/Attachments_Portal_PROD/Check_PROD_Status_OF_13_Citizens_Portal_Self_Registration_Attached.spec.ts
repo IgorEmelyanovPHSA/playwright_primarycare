@@ -915,7 +915,8 @@ test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, bro
    }); 
 
 test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page, browser }) => {
-    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
+    await page.goto('https://hcr.healthlinkbc.ca/s/');
+    //await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
     await page.getByLabel('First name', { exact: true }).click();
