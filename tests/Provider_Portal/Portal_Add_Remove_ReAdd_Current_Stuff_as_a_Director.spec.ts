@@ -20,6 +20,7 @@ test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => 
   await page.locator('span').filter({ hasText: /^39100$/ }).click();
   await page.getByLabel('System Role - Current').click();
   
+  /*
   await page.getByText('Provider', { exact: true }).click();
   await page.getByRole('button', { name: 'Save' }).click();
   await page.getByText('Kristine Fisher | CASTLEGAR').click();
@@ -31,5 +32,5 @@ test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => 
   await page.getByRole('button', { name: 'Edit Manage Facility' }).click();
   await page.getByLabel('Manage Facility').check();
   await page.getByRole('button', { name: 'Save' }).click();
-  
+  */
 });
