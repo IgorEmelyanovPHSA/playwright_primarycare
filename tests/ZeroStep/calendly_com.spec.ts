@@ -7,7 +7,7 @@ test.describe('Calendly', () => {
     await page.goto('https://calendly.com/zerostep-test/test-calendly')
     await page.waitForSelector('[data-testid="calendar"]')
     //ZeroStep Account usage expided - Current Cycle Usage 500 requests.
-    await ai('Dismiss the privacy cookie modal form', { page, test })
+    //await ai('Dismiss the privacy cookie modal form', { page, test })
     
     //await ai('Click on a first available day in the calendar', { page, test })
     //await ai('Click on 31 in the calendar', { page, test })
