@@ -46,26 +46,26 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Gonndonn Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Gordon PLAYWRIGHT Preferred Name');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
-  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('7788791111');
+  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(555)555-5555');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
   await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Email"]');
   //await page.locator('[id="\\31 -414"]').getByText('Email').click();
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
-  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-2222');
+  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(777) 777-7777');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'No' }).locator('span').first().click();
   //What is your most recent family doctor?
   await page.click('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input');
   //await page.locator('#input111-519').click();
-  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha most Recent Family Doctor');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="mostRecentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha PLAYWRIGHT most Recent Family Doctor');
   //await page.locator('#input111-519').fill('Kurdecha Family Doctor');
   await page.click('omnistudio-omniscript-text[data-omni-key="lastPractitionerVisit"] input');
   //await page.locator('#input115-535').click();
@@ -125,9 +125,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
   //What is the name of your current family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
-  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha Current Family Doctor');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'BOT DO NOT USE LeemonCitrus Prefferd Name - Gordon"s Dad');
   //await page.locator('#input235-1294').click();
-  //await page.locator('#input235-1294').fill('Kurdecha Current Family Doctor');
+  //await page.locator('#input235-1294').fill('BOT DO NOT USE LeemonCitrus Prefferd Name - Gordon"s Dad'');
   //Which town or city is your current family doctor or nurse practitioner located in?
   await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
   await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Fleetwood');

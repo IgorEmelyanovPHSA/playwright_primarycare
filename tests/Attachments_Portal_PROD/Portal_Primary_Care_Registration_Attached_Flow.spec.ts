@@ -15,7 +15,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('combobox', { name: 'Your relationship to this' }).click();
   await page.getByText('Legal guardian', { exact: true }).click();
   await page.getByLabel('Your first and last name').click();
-  await page.getByLabel('Your first and last name').fill('BOT PLAYWRIGHTLegalGuardian');
+  await page.getByLabel('Your first and last name').fill('DO NOT USE BOTLegalGuardian');
   await page.getByLabel('First name', { exact: true }).click();
   await page.getByLabel('First name', { exact: true }).fill('Lawerence');
   await page.getByLabel('Last name', { exact: true }).click();
@@ -49,28 +49,28 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE "Lawerence_Menzies" Playwright Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE "Lawerence_Menzies" PLAYWRIGHT Preferred Name');
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
-  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT Playwright PrimaryContactName');
+  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT DO NOT USE PLAYWRIGHT PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
-  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(778) 879-3333');
+  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(444) 444-4444');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
   await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Email"]');
   //await page.locator('[id="\\31 -414"]').getByText('Email').click();
   await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
-  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(778) 879-4444');
+  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(888) 888-8888');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
   //What is the name of your current family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
-  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha Playwright Current Family Doctor');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha PLAYWRIGHT Current Family Doctor');
   //await page.locator('#input109-517').click();
-  //await page.locator('#input109-517').fill('AI Kurdecha Current Family Doctor Selector');
+  //await page.locator('#input109-517').fill('AI BOT DO NOT USE Kurdecha PLAYWRIGHT Current Family Doctor');
   //Which town or city is your current family doctor or nurse practitioner located in?
   await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
   await page.fill('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input', 'Fleetwood');
