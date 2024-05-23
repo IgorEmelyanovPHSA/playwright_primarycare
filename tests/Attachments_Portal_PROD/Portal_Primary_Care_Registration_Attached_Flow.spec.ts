@@ -99,11 +99,11 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Seizures or Epilepsy' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Submit registration' }).click();
-  await page.getByText('Lawerence Menzies is now on the').click();
-  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-  await page.getByRole('button', { name: 'Start a new registration' }).click();
-*/  
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Lawerence Menzies is now on the Health Connect Registry.').click();
+  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  ///await page.getByRole('button', { name: 'Start a new registration' }).click();
+ */
 }); 
 
 

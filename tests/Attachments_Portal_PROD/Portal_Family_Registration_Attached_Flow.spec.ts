@@ -93,9 +93,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  //await page.getByRole('button', { name: 'Submit registration' }).click();
-  //await page.getByText('Gordon Krull, you are now on').click();
-  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
+  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
 
   
   ///////////2. Register Family Member "Kelvin Lemoine"  -> Gordon's DAD /////////////////////////
@@ -153,9 +153,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  //await page.getByRole('button', { name: 'Submit registration' }).click();
-  //await page.getByText('Kelvin Lemoine is now on the').click();
-  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
+  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   */
 }); 
 

@@ -96,7 +96,7 @@ test('Can_do_Gow-Cooper_Nipus_Registration_for_Attached_in_Portal', async ({page
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Gow-Cooper Nipius is now on the').click();
+    ////await page.getByText('Gow-Cooper Nipius, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -196,7 +196,7 @@ test('Can_do_Mauricio_Beal_Registration_for_Attached_in_Portal', async ({page, b
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Mauricio Beal is now on the').click();
+    ////await page.getByText('Mauricio Beal, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -296,7 +296,7 @@ test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, brow
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Huey Cheng is now on the').click();
+    ////await page.getByText('Huey Cheng, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -397,7 +397,7 @@ await page.getByLabel('Preferred name (optional)').click();
  await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
  await page.getByRole('button', { name: 'Continue' }).click();
  ////await page.getByRole('button', { name: 'Submit registration' }).click();
- ////await page.getByText('HArty Self is now on the').click();
+ ////await page.getByText('Harty Self, you are now on the Health Connect Registry.').click();
  ////await page.getByRole('article').click();
  ////await page.getByText('Each community has a team').click();
  ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -499,7 +499,7 @@ test('Can_do_Norris_Mays_Registration_for_Attached_in_Portal', async ({page, bro
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Norris Mays is now on the').click();
+    ////await page.getByText('Norris Mays, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -600,7 +600,7 @@ test('Can_do_Burt_Sneed_Registration_for_Attached_in_Portal', async ({page, brow
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Burt Sneed is now on the').click();
+    ////await page.getByText('Burt Sneed, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -701,7 +701,7 @@ test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, b
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Burt Sneed is now on the').click();
+    ////await page.getByText('Heath Crippen, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -709,7 +709,7 @@ test('Can_do_Heath_Crippen_Registration_for_Attached_in_Portal', async ({page, b
     */
    });
    
-test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, browser }) => {
+test('BOT_Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, browser }) => {
     await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
     await page.getByRole('button', { name: 'Next' }).click();
     await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -745,12 +745,12 @@ test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, br
     await page.getByRole('textbox', { name: 'City' }).fill('Richmond');
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByLabel('Preferred name (optional)').click();
-    await page.getByLabel('Preferred name (optional)').fill('Burt SNEED Playwright Preferred NAme');
+    await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Silas Cherry Preferred Name');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
     await page.getByLabel('Preferred name (optional)').press('ArrowRight');
-    await page.getByLabel('Preferred name (optional)').fill('MAy Norris Playwright Preferred NAme');
+    await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Silas Cherry Preferred Name');
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
     await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -773,7 +773,7 @@ test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, br
     await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
     //await page.locator('#input107-513').click();
     //AI Enter Provider preferences and enter "AI Kurdecha Selector"
-    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI for "Silas_Cherry" Kurdecha Selector');
+    await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha most Recent Family Doctor');
     //await page.locator('#input107-513').fill('Kurdecha Family Doctor');
     // AI Click on the input component
     await page.click('omnistudio-omniscript-text[data-omni-key="practitionerLocation"] input');
@@ -802,14 +802,13 @@ test('Can_do_Silas_Cherry_Registration_for_Attached_in_Portal', async ({page, br
     await page.locator('label').filter({ hasText: 'I am pregnant or have recently given birth' }).locator('span').first().click();
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
-    ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Burt Sneed is now on the').click();
-    ////await page.getByRole('article').click();
-    ////await page.getByText('Each community has a team').click();
-    ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-   
+    ///await page.getByRole('button', { name: 'Submit registration' }).click();
+    ///await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
+    ///await page.getByRole('article').click();
+    ///await page.getByText('Each community has a team').click();
+    ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
     */
-   });  
+    });  
 
 test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, browser }) => {
     await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
@@ -906,7 +905,7 @@ test('Can_do_Titus_Suitt_Registration_for_Attached_in_Portal', async ({page, bro
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Titus Suitt is now on the').click();
+    ////await page.getByText('Titus Suitt, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -1009,7 +1008,7 @@ test('BOT_Can_do_Gordon_Krull_Registration_for_Attached_in_Portal', async ({page
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Gordon Krull is now on the').click();
+    ////await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -1110,7 +1109,7 @@ test('BOT_Can_do_Kelvin_Lemoine_Registration_for_Attached_in_Portal', async ({pa
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Kelvin Lemoine is now on the').click();
+    ////await page.getByText('Kelvin Lemoine, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -1212,7 +1211,7 @@ test('Can_do_Danny_Bellman_Registration_for_Attached_in_Portal', async ({page, b
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Danny Bellman is now on the').click();
+    ////await page.getByText('Danny Bellman, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
@@ -1313,7 +1312,7 @@ test('BOT_Can_do_Lawerence_Menzies_Registration_for_Attached_in_Portal', async (
     await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
     await page.getByRole('button', { name: 'Continue' }).click();
     ////await page.getByRole('button', { name: 'Submit registration' }).click();
-    ////await page.getByText('Lawerence Menzies is now on the').click();
+    ////await page.getByText('Lawerence Menzies, you are now on the Health Connect Registry.').click();
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
