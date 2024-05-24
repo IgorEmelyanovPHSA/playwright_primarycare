@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Can_Add_Current_Staff_NOAN_GRAY_to_Directors_BELLAs_APPLETREEs_Clinic_in_Portal', async ({page, browser }) => {
+test('Can_Add_Current_MOA_Staff_NOAN_GRAY_to_Directors_BELLA"s_APPLETREE"s_Clinic_in_Portal', async ({page, browser }) => {
     ///////////////////
-    //1. Manuall in SF Remove NOAN_GRAY from Clinic stuff first.
+    //1. Manuall in SF Remove MoA - NOAN_GRAY from Clinic stuff first.
     ///////////////////////////
 
     //2. Login as Director 'BELLA APPLETREE'
-    //await page.goto('https://bchealthprovider.ca');
-    await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s');
+    await page.goto('https://bchealthprovider.ca');
+    
     /*
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('bella@mail.com');
