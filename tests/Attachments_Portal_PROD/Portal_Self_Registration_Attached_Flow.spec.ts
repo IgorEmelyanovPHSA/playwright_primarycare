@@ -41,12 +41,12 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Silas Cherry PLAYWRIGHT Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
   await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
   await page.getByLabel('Preferred name (optional)').press('ArrowLeft');
   await page.getByLabel('Preferred name (optional)').press('ArrowRight');
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Silas Cherry PLAYWRIGHT Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');

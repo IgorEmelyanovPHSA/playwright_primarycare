@@ -46,7 +46,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE Gordon PLAYWRIGHT Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
@@ -119,13 +119,13 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE LeemonCitrus Prefferd Name - Gordon"s Dad');
+  await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'Yes' }).locator('span').first().click();
   //What is the name of your current family doctor or nurse practitioner?
   await page.click('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input');
-  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'BOT DO NOT USE LeemonCitrus Prefferd Name - Gordon"s Dad');
+  await page.fill('omnistudio-omniscript-text[data-omni-key="currentPractitionerName"] input', 'AI BOT DO NOT USE Kurdecha PLAYWRIGHT most Recent Family Doctor');
   //await page.locator('#input235-1294').click();
   //await page.locator('#input235-1294').fill('BOT DO NOT USE LeemonCitrus Prefferd Name - Gordon"s Dad'');
   //Which town or city is your current family doctor or nurse practitioner located in?

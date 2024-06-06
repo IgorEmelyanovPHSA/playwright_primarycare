@@ -49,7 +49,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByLabel('Preferred name (optional)').click();
-  await page.getByLabel('Preferred name (optional)').fill('BOT DO NOT USE "Lawerence_Menzies" PLAYWRIGHT Preferred Name');
+  await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
   await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT DO NOT USE PLAYWRIGHT PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
