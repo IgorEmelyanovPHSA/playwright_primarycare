@@ -16,9 +16,9 @@ test('Can_Add_Current_MOA_Staff_NOAN_GRAY_to_Directors_BELLA"s_APPLETREE"s_Clini
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     await page.getByPlaceholder('Password').fill('PROV@222');
     await page.getByRole('button', { name: 'Log in' }).click();
-
-    //3. Adding Staff Member "NOAN GRAY" as an Provider to Clinic "Elwood Medical Clinic Do Not Use"
-    await page.getByLabel('Elwood Medical Clinic Do Not Use').click();
+    
+    //3. Adding Staff Member "NOAN GRAY" as an Provider to Clinic "Avecina Medical Clinic Do Not Use"
+    await page.getByLabel('Avecina Medical Clinic Do Not Use').click();
     await page.getByRole('button', { name: 'Add' }).click();
     await page.getByPlaceholder('Search Contacts...').click();
     await page.getByPlaceholder('Search Contacts...').fill('noan');
@@ -29,7 +29,7 @@ test('Can_Add_Current_MOA_Staff_NOAN_GRAY_to_Directors_BELLA"s_APPLETREE"s_Clini
     await page.getByRole('button', { name: 'Save' }).click();
 
     //4. Manage Access -> checkbox "Manage Fasility" for Kristine Fisher in Details.
-    await page.getByText('Noan Gray | Elwood Medical').click();
+    await page.getByText('Noan Gray | Avecina Medical Clinic Do Not Use').click();
     await page.getByRole('tab', { name: 'Give Access To' }).click();
     await page.getByRole('tab', { name: 'Details' }).click();
     await page.getByRole('tab', { name: 'Details' }).click();

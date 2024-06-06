@@ -98,8 +98,8 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   await page.locator('label').filter({ hasText: 'I am pregnant or have recently given birth' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  ///await page.getByRole('button', { name: 'Submit registration' }).click();
-  ///await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
+  await page.getByRole('button', { name: 'Submit registration' }).click();
+  await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
   ///await page.getByRole('article').click();
   ///await page.getByText('Each community has a team').click();
   ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
