@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => {
   ////////////////////
-  //1. Manuall in SF Remove Kristine Fisher from Clinic stuff first.
+  //1. Manually in SF Remove Kristine Fisher from Clinic stuff first.
   ///////////////////////////
   
   await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/providerclinicportal/s/');
@@ -18,7 +18,8 @@ test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => 
   await page.getByPlaceholder('Search Contacts...').click();
   await page.getByPlaceholder('Search Contacts...').fill('kristine');
   await page.locator('span').filter({ hasText: /^39100$/ }).click();
-  await page.getByLabel('System Role - Current').click();
+  await page.click('button[aria-label="System Role"]');
+  //await page.getByLabel('System Role').click();
   
   /*
   await page.getByText('Provider', { exact: true }).click();
