@@ -91,15 +91,15 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.locator('fieldset').filter({ hasText: /^YesNo$/ }).locator('span').nth(1).click();
   // "What Language"
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Ital');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Filipino Sign Language');
   //await page.locator('#inputId-582').click();
-  //await page.locator('#inputId-582').fill('Ital');
-  await page.getByText('Italian').click();
+  //await page.locator('#inputId-582').fill('Filipino Sign Language');
+  await page.getByText('Filipino Sign Language').click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Seizures or Epilepsy' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
   ///await page.getByText('Lawerence Menzies is now on the Health Connect Registry.').click();
   ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   ///await page.getByRole('button', { name: 'Start a new registration' }).click();

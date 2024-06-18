@@ -85,16 +85,16 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   // "What Language"
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
   //await page.locator('#inputId-582').click();
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'German');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Langue des signes québécoise');
   //await page.locator('#inputId-582').fill('German');
-  await page.getByText('German', { exact: true }).click();
+  await page.getByText('Langue des signes québécoise', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   //Health Questionary
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
   ///await page.getByRole('button', { name: 'Submit registration' }).click();
-  ////await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
+  ///await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
   ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
 
   
@@ -144,10 +144,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('fieldset').filter({ hasText: /^YesNo$/ }).locator('span').nth(1).click();
   //In what language do you need a translator?
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'canton');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Banso - from Cameroon. Lamso');
   //await page.locator('#inputId-1359').click();
-  //await page.locator('#inputId-1359').fill('canton');
-  await page.getByText('Cantonese').click();
+  //await page.locator('#inputId-1359').fill('Banso - from Cameroon. Lamso'');
+  await page.getByText('Banso - from Cameroon. Lamso').click();
   await page.getByRole('button', { name: 'Continue' }).click();
   //Health Questionary
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();

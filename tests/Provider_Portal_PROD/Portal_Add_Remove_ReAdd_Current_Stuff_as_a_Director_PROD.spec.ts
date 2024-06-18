@@ -23,7 +23,8 @@ test('Can_Add_Current_MOA_Staff_NOAN_GRAY_to_Directors_BELLA"s_APPLETREE"s_Clini
     await page.getByPlaceholder('Search Contacts...').click();
     await page.getByPlaceholder('Search Contacts...').fill('noan');
     await page.locator('span').filter({ hasText: /^39100$/ }).click();
-    await page.getByLabel('System Role - Current').click();
+    await page.click('button[aria-label="System Role"]');
+    #await page.getByLabel('System Role - Current').click();
 
     await page.getByText('Provider', { exact: true }).click();
     await page.getByRole('button', { name: 'Save' }).click();

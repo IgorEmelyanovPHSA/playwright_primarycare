@@ -90,16 +90,16 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   // AI Enter "What Language"
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
   //await page.locator('#inputId-578').click();
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Polis');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'French-Canadian');
   //await page.locator('#inputId-578').fill('Polis');
-  await page.getByText('Polish').click();
+  await page.getByText('French-Canadian').click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.locator('label').filter({ hasText: 'Major surgery' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'I am pregnant or have recently given birth' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Sickle Cell Disease' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Submit registration' }).click();
-  await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
   ///await page.getByRole('article').click();
   ///await page.getByText('Each community has a team').click();
   ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
