@@ -25,7 +25,7 @@ test('Can_see_Clinic_Details_as_an_TIER1', async ({page, browser }) => {
     */
 });
    
-test('Can_see_Clinic_Details_as_an_MOA_Nolan_Gary', async ({page, browser }) => {
+test('Can_see_Clinic_Details_as_an_MOA_NOLAN_GRAY', async ({page, browser }) => {
     
     await page.goto('https://bchealthprovider.ca');
 
@@ -34,7 +34,7 @@ test('Can_see_Clinic_Details_as_an_MOA_Nolan_Gary', async ({page, browser }) => 
     await page.getByPlaceholder('Username').fill('nolan@mail.com.moa');
     await page.locator('#sfdc_password_container div').click();
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
-    await page.getByPlaceholder('Password').fill('PROV@12345');
+    await page.getByPlaceholder('Password').fill('PROV@5678');
     ///if user is not Activated yet after Refreshments.
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.getByLabel('Search all clinics in BC').click();

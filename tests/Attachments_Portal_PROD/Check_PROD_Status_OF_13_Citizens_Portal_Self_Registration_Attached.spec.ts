@@ -24,8 +24,9 @@ test('Can_do_Gow-Cooper_Nipus_Registration_for_Attached_in_Portal', async ({page
 
     //await page.getByText('Thank you, Gow-Cooper Nipius is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
+    /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -100,7 +101,7 @@ test('Can_do_Gow-Cooper_Nipus_Registration_for_Attached_in_Portal', async ({page
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-    
+    */
    });
    
 test('Can_do_Mauricio_Beal_Registration_for_Attached_in_Portal', async ({page, browser }) => {
@@ -224,8 +225,8 @@ test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, brow
 
     //await page.getByText('Thank you, Huey Cheng is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
-    /*
+    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -300,7 +301,7 @@ test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, brow
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-    */
+    
 });
 
 test('Can_do_Courtney_Harty_Self_Registration_for_Attached_in_Portal', async ({page, browser }) => {
@@ -426,9 +427,9 @@ test('Can_do_Norris_Mays_Registration_for_Attached_in_Portal', async ({page, bro
 
     //await page.getByText('Thank you, Norris Mays is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
-    //await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+    await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
     
-    
+    /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
     await page.getByRole('textbox', { name: 'City' }).click();
@@ -503,7 +504,7 @@ test('Can_do_Norris_Mays_Registration_for_Attached_in_Portal', async ({page, bro
     ////await page.getByRole('article').click();
     ////await page.getByText('Each community has a team').click();
     ////await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-    
+    */
    });
 
 test('Can_do_Burt_Sneed_Registration_for_Attached_in_Portal', async ({page, browser }) => {
