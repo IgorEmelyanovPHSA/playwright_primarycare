@@ -12,8 +12,8 @@ const getSQLPatientId_Hollis =  "https://healthbc--hlthbcqax.sandbox.my.salesfor
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9696SH3dTknJmN3fE1Fpc3epKlh5tYp5Y_8Xg15C0R_Sa1S7ri5jjflULCe8KcuWkdQx4YwHUMjVE67T0';
-const client_secret = '55BAC181AD2316D5AFC25611439E04734FD6D291EDB8C37B848E803D70B8AA84';
+const client_id = '3MVG9TZvGM_0NqB0lblG48m.6T6ucgM1rxhs3sr5ubcM498ju3Wi4NmLFniacHcU7WzRzYnor4EcTdvn7jx7E';
+const client_secret = 'DE161A2E5C59C0AB8131A0138BBA87EDD570E712E8EDC02E222D62A33E33D951';
 
 
 test('API_Preconditioning_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
