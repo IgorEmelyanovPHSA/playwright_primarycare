@@ -85,9 +85,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   // "What Language"
   await page.click('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input');
   //await page.locator('#inputId-582').click();
-  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Langue des signes québécoise');
+  await page.fill('omnistudio-omniscript-typeahead-block[data-omni-key="translatorLanguage-Block"] input', 'Quebec Sign Language');
   //await page.locator('#inputId-582').fill('German');
-  await page.getByText('Langue des signes québécoise', { exact: true }).click();
+  await page.getByText('Quebec Sign Language', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   //Health Questionary
   await page.locator('label').filter({ hasText: 'I am pregnant or have' }).locator('span').first().click();
