@@ -9,6 +9,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   //UATX
   //await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
+  /*
   ///////////1. Register Gordon Krull, FIRST  ///////////////
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -30,10 +31,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
 
   //await page.getByText('Thank you, Gordon Krull is already registered.').click();
   //AI Click on the "There was an issue with the information entered." text
-  await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
+  /////await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
   //await page.getByText('The information entered does not match provincial health records.').click();
 
-  /*
+  
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
