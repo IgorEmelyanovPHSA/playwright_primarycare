@@ -226,7 +226,6 @@ test('Can_do_Huey_Cheng_Registration_for_Attached_in_Portal', async ({page, brow
     //await page.getByText('Thank you, Huey Cheng is already registered.').click();
     //AI Click on the "There was an issue with the information entered." text
     await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
-
     /*
     await page.getByRole('combobox', { name: 'Street address' }).click();
     await page.getByRole('combobox', { name: 'Street address' }).fill('307-7631 Francis Rd');
