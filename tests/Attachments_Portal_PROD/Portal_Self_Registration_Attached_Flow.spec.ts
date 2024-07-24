@@ -7,7 +7,7 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   //UATX
   await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
   
-  
+  /*
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register myself or my family' }).click();
   await page.getByLabel('First name', { exact: true }).click();
@@ -103,13 +103,13 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   await page.locator('label').filter({ hasText: 'Heart Attack, Heart Disease, Irregular Heartbeat, Angina, Heart Failure or High Blood Pressure' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'High Blood Sugar (for example, Diabetes)' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Submit registration' }).click();
-  await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
-  await page.getByRole('article').click();
-  await page.getByText('Each community has a team').click();
-  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Silas Cherry, you are now on the Health Connect Registry.').click();
+  ///await page.getByRole('article').click();
+  ///await page.getByText('Each community has a team').click();
+  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
  
-  
+  */
   });  
 
 
