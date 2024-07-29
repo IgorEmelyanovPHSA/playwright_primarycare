@@ -13,7 +13,7 @@ test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => 
   await page.getByRole('button', { name: 'Log in' }).click();
   
   //2. Adding Staff Member "Kristine Fisher" as an Provider to Clinic
-  await page.getByLabel('CASTLEGAR MED FAMILY CLINIC').click();
+  await page.getByRole('article').getByLabel('CASTLEGAR MED FAMILY CLINIC').click();
   await page.getByRole('button', { name: 'Add' }).click();
   await page.getByPlaceholder('Search Contacts...').click();
   await page.getByPlaceholder('Search Contacts...').fill('kristine');
