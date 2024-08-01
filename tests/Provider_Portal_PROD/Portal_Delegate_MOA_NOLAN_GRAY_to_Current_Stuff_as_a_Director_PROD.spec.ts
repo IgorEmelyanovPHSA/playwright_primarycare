@@ -3,8 +3,9 @@ import { test, expect } from '@playwright/test';
 
 test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s_Clinic_in_Portal', async ({page, browser }) => {
     //////////////DELEGATION /////
-    //PROD//1. Manualy in SF Remove MoA - NOLAN_GRAY from Clinic stuff first.
-    //UATX//1. Manualy in SF Remove MoA - Agnes Phillip from Clinic stuff first.
+    //PROD//1. Manualy in SF Remove MoA - NOLAN_GRAY from Clinic stuff first. Bella -> "Give Access To" Tab
+    //UATX//1. Manualy in SF Remove MoA - Agnes Phillip from Clinic stuff first. Karen -> "Give Access To" Tab or just go to Agness Phillip and remove 	
+                                                                                                //"Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME"
     ///////////////////////////
 
     //PROD//2. Login as Director 'Bella Appletree Do Not Use'
@@ -24,7 +25,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     
     //PROD
-    await page.getByPlaceholder('Password').fill('PROV@222');
+    await page.getByPlaceholder('Password').fill('PROV@333');
     //UATX
     ///await page.getByPlaceholder('Password').fill('PAS@123456');
     
@@ -32,8 +33,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     
     //PROD//3. Adding Staff Member "NOLAN GRAY" to Clinic "Avecina Medical Clinic Do Not Use"
     //UATX//3. Adding Staff Member "Agnes Phillip" to Clinic "AVECINA MED FAMILY CLINIC"
-    //PROD           ////  Ellwood Medical Clinic Do Not Use - no Add button there //Avecina Medical Clinic Do Not Use
-    //await page.getByLabel('Avecina Medical Clinic Do Not Use').click();
+    
     //UATX
     ///await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
     ///await page.getByRole('button', { name: 'Add' }).click();
@@ -47,7 +47,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     await page.getByTitle('Nolan Gary Do Not Use').click();
     await page.getByRole('combobox', { name: 'System Role' }).click();
     //await page.waitForTimeout(500);
-    ///???? why await page.getByText('Medical Office Assistant', { exact: true }).click(); // this on ehas stop working ???
+    ///???? why await page.getByText('Medical Office Assistant', { exact: true }).click(); // this on has stop working ???
     await page.getByRole('option', { name: 'Medical Office Assistant' }).click();  //this one is working
     //await page.waitForTimeout(500);
     
@@ -65,7 +65,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     //Verify
     //PROD//4. Manage Access -> checkbox "Manage Fasility" for "NOLAN GRAY" in Details.
     //UATX//4. Manage Access -> checkbox "Manage Fasility" for "Agnes Phillip" in Details.
-    //PROD          ////  Nolan Gray Do Not Use | Ellwood Medical Clinic Do Not Use  
+    //PROD    
     await page.getByText('Nolan Gary Do Not Use | Avecina Medical Clinic Do Not Use').click();
     //UATX
     ///await page.getByText('Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME').click();
@@ -97,14 +97,12 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     
     //PROD
-    await page.getByPlaceholder('Password').fill('PROV@222');
+    await page.getByPlaceholder('Password').fill('PROV@333');
     //UATX
     ///await page.getByPlaceholder('Password').fill('PAS@123456');
     
     await page.getByRole('button', { name: 'Log in' }).click();
     
-    //PROD//3. Adding Staff Member "NOLAN GRAY" to Clinic "Avecina Medical Clinic Do Not Use"
-    //UATX//3. Adding Staff Member "Agnes Phillip" to Clinic "AVECINA MED FAMILY CLINIC"
     //PROD           ////  Ellwood Medical Clinic Do Not Use  //Avecina Medical Clinic Do Not Use
     await page.getByLabel('Avecina Medical Clinic Do Not Use').click();
     //UATX
@@ -130,11 +128,18 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
 
     ///need to scroll done in PROD to click on Manage Fsility check Box
     // Scroll down the page
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
     await page.evaluate(() => {
         window.scrollBy(0, window.innerHeight);
     });
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
+
+    // Scroll down the page
+    await page.waitForTimeout(1000);
+    await page.evaluate(() => {
+        window.scrollBy(0, window.innerHeight);
+    });
+    await page.waitForTimeout(1000);
 
     //scroll up
     //await page.waitForTimeout(500);
@@ -149,10 +154,17 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
 
 
     await page.getByRole('button', { name: 'Edit Manage Facility' }).click();
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
     await page.getByLabel('Manage Facility').check();
-    await page.waitForTimeout(500);
+
+    // Scroll down the page
+    await page.waitForTimeout(1000);
+    await page.evaluate(() => {
+        window.scrollBy(0, window.innerHeight);
+    });
+    await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Save' }).click();
+    
     */
 });
 

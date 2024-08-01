@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({page, browser }) => {
+test('do_not_run_Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({page, browser }) => {
   //PROD
   //await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   //UATX

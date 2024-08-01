@@ -3,11 +3,11 @@ import { test, expect } from '@playwright/test';
 
 test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached_in_Portal', async ({page, browser }) => {
   //PROD
-  //await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
+  await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   //QAX
   //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   //UATX
-  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
+  ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
   /*
   ///////////1. Register Gordon Krull, FIRST  ///////////////

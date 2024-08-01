@@ -47,8 +47,8 @@ test('Can_see_Clinic_Details_as_an_MOA_NOLAN_GRAY', async ({page, browser }) => 
     /////await page.goto('https://example.com');
     await page.getByText('Clinic Details').waitFor();
     await page.getByRole('tab', { name: 'Clinic Details' }).click();
-    await page.getByText('1101 3RD ST').first().click();
-    */
+    await page.getByText('1840 8 Avenue').first().click();
+   */ 
 });
 
 
