@@ -10,10 +10,11 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
 
     //PROD//2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
+    /////////////////https://healthbc.my.site.com/providerclinicportal/s/login/ ///////--custom link to provider 
     ///UATX//2. Login as Director 'Karen F. Beegan'
     ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s');
 
-    /*
+    
     await page.getByPlaceholder('Username').click();
     
     //PROD
@@ -25,9 +26,9 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     
     //PROD
-    await page.getByPlaceholder('Password').fill('PROV@333');
+    await page.getByPlaceholder('Password').fill('PROV@5678');
     //UATX
-    ///await page.getByPlaceholder('Password').fill('PAS@123456');
+    ///await page.getByPlaceholder('Password').fill('PAS@1234');
     
     await page.getByRole('button', { name: 'Log in' }).click();
     
@@ -40,7 +41,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     ///await page.getByPlaceholder('Search Contacts...').click();
     
     //PROD
-    await page.getByLabel('Avecina Medical Clinic Do Not').click();
+    await page.getByRole('article').getByLabel('Avecina Medical Clinic Do Not').click();
     await page.getByRole('button', { name: 'Add' }).click();
     await page.getByPlaceholder('Search Contacts...').click();
     await page.getByPlaceholder('Search Contacts...').fill('nolan');
@@ -49,6 +50,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     //await page.waitForTimeout(500);
     ///???? why await page.getByText('Medical Office Assistant', { exact: true }).click(); // this on has stop working ???
     await page.getByRole('option', { name: 'Medical Office Assistant' }).click();  //this one is working
+    ///await page.getByRole('article').getByLabel('Avecina Medical Clinic Do Not').click();
     //await page.waitForTimeout(500);
     
     //UATX
@@ -71,7 +73,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     ///await page.getByText('Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME').click();
     ///////await page.getByText('Kristine Fisher | NORTH SHORE PRIMARY CARE MED HOME').click();//only for Provider Kristine Fisher
     
-    */
+    
 });
 
 test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, browser }) => {
@@ -85,7 +87,7 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     //UATX//2. Login as Director 'Karen F. Beegan'
     ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s');
 
-    /*
+    
     await page.getByPlaceholder('Username').click();
     
     //PROD
@@ -99,12 +101,12 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     //PROD
     await page.getByPlaceholder('Password').fill('PROV@333');
     //UATX
-    ///await page.getByPlaceholder('Password').fill('PAS@123456');
+    ///await page.getByPlaceholder('Password').fill('PAS@1234');
     
     await page.getByRole('button', { name: 'Log in' }).click();
     
     //PROD           ////  Ellwood Medical Clinic Do Not Use  //Avecina Medical Clinic Do Not Use
-    await page.getByLabel('Avecina Medical Clinic Do Not Use').click();
+    await page.getByRole('article').getByLabel('Avecina Medical Clinic Do Not').click();
     //UATX
     ///await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
     
@@ -165,7 +167,7 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Save' }).click();
     
-    */
+    
 });
 
 

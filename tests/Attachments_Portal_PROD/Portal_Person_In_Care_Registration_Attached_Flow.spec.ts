@@ -9,7 +9,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   //UATX
   ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
-  /*
+  
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('heading', { name: 'I am registering a person in' }).click();
   await page.getByRole('button', { name: 'Register a person in my care' }).click();
@@ -54,9 +54,9 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
   await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT DO NOT USE PLAYWRIGHT PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
-  await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
+  await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('7782364393@gmail.com');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
-  await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
+  await page.getByRole('textbox', { name: 'Confirm email address' }).fill('7782364393@gmail.com');
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
   await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(444) 444-4444');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
@@ -106,7 +106,7 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   ///await page.getByRole('button', { name: 'Start a new registration' }).click();
  
-  */
+  
 }); 
 
 

@@ -6,7 +6,7 @@ test('Can_Change_Clinic_of_Empaneled_Patient_as_Directors', async ({ page }) => 
   await page.locator('#sfdc_username_container div').click();
   await page.getByPlaceholder('Username').fill('director3@phsa.ca.hlthbcuatx');
   await page.getByPlaceholder('Password').click();
-  await page.getByPlaceholder('Password').fill('PAS@123456');
+  await page.getByPlaceholder('Password').fill('PAS@1234');
   await page.getByRole('button', { name: 'Log in' }).click();
   
   await page.getByLabel('My Panel').first().click();

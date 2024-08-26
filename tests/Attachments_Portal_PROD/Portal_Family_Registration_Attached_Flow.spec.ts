@@ -9,7 +9,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   //UATX
   ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
-  /*
+  
   ///////////1. Register Gordon Krull, FIRST  ///////////////
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Register myself or my family' }).click();
@@ -26,7 +26,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByPlaceholder('YYYY').click();
   await page.getByPlaceholder('YYYY').fill('1990');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
+  ////////await page.getByRole('button', { name: 'Continue' }).click();
 
 
   //await page.getByText('Thank you, Gordon Krull is already registered.').click();
@@ -35,7 +35,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   //await page.getByText('The information entered does not match provincial health records.').click();
 
   
-  await page.getByRole('combobox', { name: 'Street address' }).click();
+  ///////await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
   await page.getByRole('textbox', { name: 'City' }).fill('Fleetwood');
@@ -95,9 +95,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic Attack' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Heart Attack, Heart Disease, Irregular Heartbeat, Angina, Heart Failure or High Blood Pressure' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  ///await page.getByRole('button', { name: 'Submit registration' }).click();
-  ///await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
-  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  await page.getByRole('button', { name: 'Submit registration' }).click();
+  await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
+  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
 
   
   ///////////2. Register Family Member "Kelvin Lemoine"  -> Gordon's DAD /////////////////////////
@@ -158,10 +158,10 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'Eating Disorder' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic Attack' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  ///await page.getByRole('button', { name: 'Submit registration' }).click();
-  ///await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
-  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-  */
+  //await page.getByRole('button', { name: 'Submit registration' }).click();
+  //await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
+  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  
 }); 
 
 
