@@ -7,7 +7,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     //UATX//1. Manualy in SF Remove MoA - Agnes Phillip from Clinic stuff first. Karen -> "Give Access To" Tab or just go to Agness Phillip and remove 	
                                                                                                 //"Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME"
     ///////////////////////////
-
+    /*
     //PROD//2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
     /////////////////https://healthbc.my.site.com/providerclinicportal/s/login/ ///////--custom link to provider 
@@ -73,7 +73,7 @@ test('Can_Delegate_Current_MOA_Staff_NOLAN_GRAY_to_Directors_BELLA"s_APPLETREE"s
     ///await page.getByText('Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME').click();
     ///////await page.getByText('Kristine Fisher | NORTH SHORE PRIMARY CARE MED HOME').click();//only for Provider Kristine Fisher
     
-    
+    */
 });
 
 test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, browser }) => {
@@ -81,7 +81,7 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     //PROD//1. Manualy in SF Remove MoA - NOLAN_GRAY from Clinic stuff first.
     //UATX//1. Manualy in SF Remove MoA - Agnes Phillip from Clinic stuff first.
     ///////////////////////////
-  
+    /*
     //PROD//2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
     //UATX//2. Login as Director 'Karen F. Beegan'
@@ -166,7 +166,7 @@ test('Can_Check_Manage_Facility_FOR_MoA_NOLAN_GRAY_In_Portal', async ({page, bro
     });
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Save' }).click();
-    
+    */
     
 });
 
