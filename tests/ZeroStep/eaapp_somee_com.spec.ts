@@ -7,8 +7,8 @@ test.describe('EA Website Testing', () => {
     await page.goto('http://eaapp.somee.com')
     //ZeroStep Account usage expided - Current Cycle Usage 500 requests.
     await ai('Click "Visit now"', { page, test })
-    await page.goto('https://www.executeautomation.com/')
-    await ai('Click Start Learning Today', { page, test })
+    //await page.goto('https://www.executeautomation.com/')
+    //await ai('Click Start Learning Today', { page, test })
     //await ai('Click Sign In in the top menu', { page, test })
     //await ai('Enter the UserName as Igor.Melanoff@gmail.com', { page, test })
     //await ai('Enter the Password as Igor7777', { page, test })
