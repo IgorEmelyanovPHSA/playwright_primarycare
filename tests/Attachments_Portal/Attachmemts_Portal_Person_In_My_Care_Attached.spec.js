@@ -8,8 +8,8 @@ const getSQLPatientId_Kenton =  "https://healthbc--hlthbcqax.sandbox.my.salesfor
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9TZvGM_0NqB3jIQBgLtpf33EOHiwDfuTAjsEz7CkivqWsmn_uLfjvz1YE67dBVHp0jtyJcFc5VqdPslU1';
-const client_secret = 'C8EFD945C889F20A7CA4374CF745C96F561ADDA5A2089DECF72CD943273014F8';
+const client_id = '3MVG9696SH3dTknKbdxhNDTR98rD3LhWik.OvhaW7ISUybXFrutu8ldn_9fcrioqY0CHuIkqle.I2Jt8HNyHX';
+const client_secret = '9D94BF2AC8F10AD78CA87CB945CCE6E971DFC5D899793110E8FDBD031A6F1E94';
 
 
 
