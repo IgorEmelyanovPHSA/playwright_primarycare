@@ -17,7 +17,8 @@ test('Can_Add_Current_Staff_to_Directors_Clinic_in_Portal', async ({ page }) => 
   await page.getByRole('button', { name: 'Add' }).click();
   await page.getByPlaceholder('Search Contacts...').click();
   await page.getByPlaceholder('Search Contacts...').fill('kristine');
-  await page.locator('span').filter({ hasText: /^39100$/ }).click();
+  //await page.locator('span').filter({ hasText: /^39100$/ }).click();
+  await page.getByTitle('Kristine Hnatyshyn Fisher').click();
   await page.click('button[aria-label="System Role"]');
   //await page.getByLabel('System Role').click();
   
