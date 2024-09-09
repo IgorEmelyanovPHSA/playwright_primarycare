@@ -3,11 +3,11 @@ import { test, expect } from '@playwright/test';
 
 test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', async ({page, browser }) => {
   //PROD
-  await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
+  ///await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   //QAX
   //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
   //UATX
-  ///await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
+  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
   /*
   await page.getByRole('button', { name: 'Next' }).click();

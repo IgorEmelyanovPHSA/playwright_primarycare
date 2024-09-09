@@ -26,7 +26,7 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.getByPlaceholder('YYYY').click();
   await page.getByPlaceholder('YYYY').fill('1990');
   await page.getByLabel('Personal Health Number (PHN)', { exact: true }).click();
-  ////////await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
 
 
   //await page.getByText('Thank you, Gordon Krull is already registered.').click();
@@ -158,9 +158,9 @@ test('Can_do_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Attached
   await page.locator('label').filter({ hasText: 'Eating Disorder' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic Attack' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  //await page.getByRole('button', { name: 'Submit registration' }).click();
-  //await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
-  //await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  ///await page.getByRole('button', { name: 'Submit registration' }).click();
+  ///await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
+  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   */
 }); 
 
