@@ -1,14 +1,9 @@
 import { test, expect } from '@playwright/test';
 
 
-test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', async ({page, browser }) => {
+test('Can_PROD_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', async ({page, browser }) => {
   //PROD
-  ///await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
-  //QAX
-  //await page.goto('https://healthbc--hlthbcqax.sandbox.my.site.com/primarycarepatientregistration/s/');
-  //UATX
-  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
-
+  await page.goto('https://healthbc.my.site.com/primarycarepatientregistration/s/');
   /*
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('heading', { name: 'I am registering a person in' }).click();
@@ -54,9 +49,9 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
   await page.getByRole('textbox', { name: 'Primary contact name' }).fill('BOT DO NOT USE PLAYWRIGHT PrimaryContactName');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
-  await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('7782364393@gmail.com');
+  await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
-  await page.getByRole('textbox', { name: 'Confirm email address' }).fill('7782364393@gmail.com');
+  await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
   await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(444) 444-4444');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
@@ -101,12 +96,12 @@ test('Can_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', 
   await page.locator('label').filter({ hasText: 'High Blood Sugar (for example, Diabetes)' }).locator('span').first().click();
   await page.locator('label').filter({ hasText: 'Seizures or Epilepsy' }).locator('span').first().click();
   await page.getByRole('button', { name: 'Continue' }).click();
-  ///await page.getByRole('button', { name: 'Submit registration' }).click();
-  ///await page.getByText('Lawerence Menzies is now on the Health Connect Registry.').click();
-  ///await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-  ///await page.getByRole('button', { name: 'Start a new registration' }).click();
+  await page.getByRole('button', { name: 'Submit registration' }).click();
+  await page.getByText('Lawerence Menzies is now on the Health Connect Registry.').click();
+  await page.getByRole('heading', { name: 'Successfully registered!' }).click();
+  await page.getByRole('button', { name: 'Start a new registration' }).click();
  
-  */ 
+  */
 }); 
 
 

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Can_Change_Clinic_of_Empaneled_Patient_as_Directors', async ({ page }) => {
+test('PROD_Can_Change_Clinic_of_Empaneled_Patient_as_Directors', async ({ page }) => {
   await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s/');
   /*
   await page.locator('#sfdc_username_container div').click();
