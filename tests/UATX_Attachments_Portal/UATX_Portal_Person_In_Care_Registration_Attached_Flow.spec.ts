@@ -5,7 +5,6 @@ test('Can_UATX_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Port
   //UATX
   await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
 
-  
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('heading', { name: 'I am registering a person in' }).click();
   await page.getByRole('button', { name: 'Register a person in my care' }).click();
