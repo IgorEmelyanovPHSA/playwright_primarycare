@@ -41,10 +41,10 @@ test('PROD_Can_Check_Manage_Facility_FOR_MoA_NOLAN_GARY_In_Portal', async ({page
     //////////////DELEGATION /////
     //1. Manualy in SF Remove MoA - NOLAN_GARY from Clinic stuff first.
     ///////////////////////////
-    
+    /*
     //2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
-    /*
+    
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('bella@mail.com');
     await page.locator('#sfdc_password_container div').click();

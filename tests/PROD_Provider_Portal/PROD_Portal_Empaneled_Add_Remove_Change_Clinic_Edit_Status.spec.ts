@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('PROD_Can_Change_Clinic_of_Empaneled_Patient_as_Directors', async ({ page }) => {
-  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s/');
   /*
+  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s/');
   await page.locator('#sfdc_username_container div').click();
   await page.getByPlaceholder('Username').fill('director3@phsa.ca.hlthbcuatx');
   await page.getByPlaceholder('Password').click();
