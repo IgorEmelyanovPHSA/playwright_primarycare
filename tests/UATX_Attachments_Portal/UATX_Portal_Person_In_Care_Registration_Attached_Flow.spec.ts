@@ -47,7 +47,7 @@ test('Can_UATX_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Port
   await page.getByLabel('Preferred name (optional)').click();
   await page.getByLabel('Preferred name (optional)').fill('DONOTUSE');
   await page.getByRole('textbox', { name: 'Primary contact name' }).click();
-  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('DONOTUSE PrimaryContactLastName');
+  await page.getByRole('textbox', { name: 'Primary contact name' }).fill('DONOTUSE BOTPrimaryContactLastNam');
   await page.getByRole('textbox', { name: 'Email address', exact: true }).click();
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
