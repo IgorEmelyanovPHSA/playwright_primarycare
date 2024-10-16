@@ -6,8 +6,20 @@ test('UATX_Can_Delegate_Current_MOA_Staff_AGNES_PHILLIP_to_Directors_KAREN"S_BEE
     //1. Manualy in SF Remove MoA - Agnes Phillip from Clinic stuff first. Karen -> "Give Access To" Tab or just go to Agness Phillip and remove 	
                                                                                                 //"Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME"
     ///////////////////////////
-    
     /*
+    //PREVIEW WIN25
+    //2. Login as Director 'Lori-Ann Bus'
+    await page.goto('https://healthbc--previewqa.sandbox.my.site.com/providerclinicportal/s/');
+    await page.getByPlaceholder('Username').click();
+    await page.getByPlaceholder('Username').fill('director6@phsa.ca.previewqa');
+    await page.locator('#sfdc_password_container div').click();
+    await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
+    await page.getByPlaceholder('Password').fill('PAS@1234');
+    await page.getByRole('button', { name: 'Log in' }).click();
+    await page.getByLabel('CASTLEGAR MED FAMILY CLINIC').click();
+    */
+    
+    //UAT
     //2. Login as Director 'Karen F. Beegan'
     await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s');
     await page.getByPlaceholder('Username').click();
@@ -16,9 +28,10 @@ test('UATX_Can_Delegate_Current_MOA_Staff_AGNES_PHILLIP_to_Directors_KAREN"S_BEE
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     await page.getByPlaceholder('Password').fill('PAS@1234');
     await page.getByRole('button', { name: 'Log in' }).click();
+    await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
     
     //3. Adding Staff Member "Agnes Phillip" to Clinic 
-    await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
+    //await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
     await page.getByRole('button', { name: 'Add' }).click();
     await page.getByPlaceholder('Search Contacts...').click();
     
@@ -37,11 +50,18 @@ test('UATX_Can_Delegate_Current_MOA_Staff_AGNES_PHILLIP_to_Directors_KAREN"S_BEE
     await page.getByRole('button', { name: 'Save' }).click();
 
     //Verify
+    /*
+    //PREVIEW WIN'25
+    //4. Manage Access -> checkbox "Manage Fasility" for "Agnes Phillip" in Details.
+    await page.getByText('Agnes Phillip | CASTLEGAR MED FAMILY CLINIC').click();
+    */
+    
+    //UATX
     //4. Manage Access -> checkbox "Manage Fasility" for "Agnes Phillip" in Details.
     await page.getByText('Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME').click();
     ///////await page.getByText('Kristine Fisher | NORTH SHORE PRIMARY CARE MED HOME').click();//only for Provider Kristine Fisher
     
-    */
+    
 });
 
 test('UATX_Can_Check_Manage_Facility_FOR_MoA_AGNES_PHILLIP_In_Portal', async ({page, browser }) => {
@@ -50,26 +70,47 @@ test('UATX_Can_Check_Manage_Facility_FOR_MoA_AGNES_PHILLIP_In_Portal', async ({p
     ///////////////////////////
 
     /*
+    //PREVIEW WINTER'25
+    //2. Login as Director 'Lori-Ann Bus'
+    await page.goto('https://healthbc--previewqa.sandbox.my.site.com/providerclinicportal/s/');
+    await page.getByPlaceholder('Username').click();
+    await page.getByPlaceholder('Username').fill('director6@phsa.ca.previewqa');
+    await page.locator('#sfdc_password_container div').click();
+    await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
+    await page.getByPlaceholder('Password').fill('PAS@1234');
+    await page.getByRole('button', { name: 'Log in' }).click();
+    await page.getByLabel('CASTLEGAR MED FAMILY CLINIC').click();
+    */
+    //UAT
     //2. Login as Director 'Karen F. Beegan'
     await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/providerclinicportal/s');
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('director3@phsa.ca.hlthbcuatx');
-    
     await page.locator('#sfdc_password_container div').click();
     await page.getByPlaceholder('Password').click({ modifiers: ['Control'] });
     await page.getByPlaceholder('Password').fill('PAS@1234');
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.getByLabel('NORTH SHORE PRIMARY CARE MED HOME').click();
     
+    
+    
+
     // Scroll down the page
     await page.waitForTimeout(500);
     await page.evaluate(() => {
         window.scrollBy(0, window.innerHeight);
     });
     await page.waitForTimeout(500);
-    
+
+    /*
+    //PREVIEW WIN'25
+    //4. Manage Access -> checkbox "Manage Fasility" for "Agnes Phillip" in Details.
+    await page.getByText('Agnes Phillip | CASTLEGAR MED FAMILY CLINIC').click();
+    */
+    //UATX
     //4. Manage Access -> checkbox "Manage Fasility" for "Agnes Phillip" in Details.
     await page.getByText('Agnes Phillip | NORTH SHORE PRIMARY CARE MED HOME').click();
+    
     await page.getByRole('tab', { name: 'Give Access To' }).click();
     await page.getByRole('tab', { name: 'Details' }).click();
     await page.getByRole('tab', { name: 'Details' }).click();
@@ -113,7 +154,7 @@ test('UATX_Can_Check_Manage_Facility_FOR_MoA_AGNES_PHILLIP_In_Portal', async ({p
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Save' }).click();
     
-    */
+    
 });
 
 

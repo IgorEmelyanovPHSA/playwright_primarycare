@@ -8,7 +8,7 @@ test('PROD_Can_Delegate_Current_MOA_Staff_NOLAN_GARY_to_Directors_BELLA"s_APPLET
     
     //2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
-    /*
+    
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('bella@mail.com');
     await page.locator('#sfdc_password_container div').click();
@@ -34,14 +34,14 @@ test('PROD_Can_Delegate_Current_MOA_Staff_NOLAN_GARY_to_Directors_BELLA"s_APPLET
     //4. Manage Access -> checkbox "Manage Fasility" for "NOLAN GRAY" in Details.
     await page.getByText('Nolan Gary Do Not Use | Avecina Medical Clinic Do Not Use').click();
     
-    */
+    
 });
 
 test('PROD_Can_Check_Manage_Facility_FOR_MoA_NOLAN_GARY_In_Portal', async ({page, browser }) => {
     //////////////DELEGATION /////
     //1. Manualy in SF Remove MoA - NOLAN_GARY from Clinic stuff first.
     ///////////////////////////
-    /*
+    
     //2. Login as Director 'Bella Appletree Do Not Use'
     await page.goto('https://bchealthprovider.ca');
     
@@ -107,7 +107,7 @@ test('PROD_Can_Check_Manage_Facility_FOR_MoA_NOLAN_GARY_In_Portal', async ({page
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Save' }).click();
     
-    */
+    
 });
 
 
