@@ -10,7 +10,7 @@ const getSQLPatientId_Hollis =  "https://healthbc--hlthbcqax.sandbox.my.salesfor
 
 
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
-const password = 'Technology1990!!!!!!'; 
+const password = 'Technology1990!!!!!!@'; 
 const grant_type = 'password';
 const client_id = '3MVG9TZvGM_0NqB2NLX4uZf5RJrIBoSuqYdsACNf.BxLYgOuA_N5zscFXB115PJsfqhLIsWorqE3KR4XY2IAX';
 const client_secret = '6747975396B797CA02EAA540FE96435994B98CF13755B9FA75794ABF5FB89D39';
