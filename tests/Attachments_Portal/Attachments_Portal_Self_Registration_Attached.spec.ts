@@ -8,8 +8,8 @@ const getSQLPatientId =  "https://healthbc--hlthbcqax.sandbox.my.salesforce.com/
 const username = 'igor.emelyanov@phsa.ca.hlthbcqax';
 const password = 'Technology1990!!!!!!'; 
 const grant_type = 'password';
-const client_id = '3MVG9696SH3dTknIjs9fMYRuEzlX8D6eI85vSpCGuIcP9AleYA_3qK4uA_2n1GUWsVrjTZ9b1ijpJ5a.iJNQs';
-const client_secret = '1BCA00065BB10A53AD7F1D3D9A50A9F86C2E639BB6CF15F686E6955CA0719C2D';
+const client_id = '3MVG9TZvGM_0NqB2NLX4uZf5RJrIBoSuqYdsACNf.BxLYgOuA_N5zscFXB115PJsfqhLIsWorqE3KR4XY2IAX';
+const client_secret = '6747975396B797CA02EAA540FE96435994B98CF13755B9FA75794ABF5FB89D39';
 
 
 test('API_Preconditioning_Removing_Dups_Sandy_Prior', async ({request, baseURL}) => {
