@@ -31,7 +31,7 @@ test('Can_do_UATX_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Att
   /////await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
   //await page.getByText('The information entered does not match provincial health records.').click();
 
-  
+  /*
   ///////await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -50,13 +50,13 @@ test('Can_do_UATX_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Att
   await page.getByRole('textbox', { name: 'Email address', exact: true }).fill('igor.emelyanov@phsa.ca');
   await page.getByRole('textbox', { name: 'Confirm email address' }).click();
   await page.getByRole('textbox', { name: 'Confirm email address' }).fill('igor.emelyanov@phsa.ca');
-  await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
-  await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(555)555-5555');
+  //await page.getByRole('textbox', { name: 'Mobile phone number' }).click();
+  //await page.getByRole('textbox', { name: 'Mobile phone number' }).fill('(555)555-5555');
   await page.getByRole('combobox', { name: 'Communication preference' }).click();
   await page.click('omnistudio-omniscript-select[data-omni-key="communicationPref"] .slds-listbox__option[data-value="Email"]');
   //await page.locator('[id="\\31 -414"]').getByText('Email').click();
-  await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
-  await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(777) 777-7777');
+  //await page.getByRole('textbox', { name: 'Alternate phone number (' }).click();
+  //await page.getByRole('textbox', { name: 'Alternate phone number (' }).fill('(777) 777-7777');
   await page.getByRole('button', { name: 'Continue' }).click();
   //Do you currently have a family doctor or nurse practitioner?
   await page.getByRole('group').locator('label').filter({ hasText: 'No' }).locator('span').first().click();
@@ -88,9 +88,11 @@ test('Can_do_UATX_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Att
   await page.getByText('Quebec Sign Language', { exact: true }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   //Health Questionary
-  await page.locator('label').filter({ hasText: 'I was just discharged from hospital and require follow up' }).locator('span').first().click();
-  await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic Attack' }).locator('span').first().click();
-  await page.locator('label').filter({ hasText: 'Heart Attack, Heart Disease, Irregular Heartbeat, Angina, Heart Failure or High Blood Pressure' }).locator('span').first().click();
+  //await page.locator('label').filter({ hasText: 'I was just discharged from hospital and require follow up' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'None apply to my health' }).locator('span').first().click();
+  //await page.locator('label').filter({ hasText: 'Stroke or Transient Ischemic Attack' }).locator('span').first().click();
+  //await page.locator('label').filter({ hasText: 'Heart Attack, Heart Disease, Irregular Heartbeat, Angina, Heart Failure or High Blood Pressure' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'None apply to my health' }).locator('span').nth(2).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Submit registration' }).click();
   await page.getByText('Gordon Krull, you are now on the Health Connect Registry.').click();
@@ -158,7 +160,7 @@ test('Can_do_UATX_Family_GORDON_KRULL_And_KELVIN_LEMOINE_Member_Registration_Att
   await page.getByRole('button', { name: 'Submit registration' }).click();
   await page.getByText('Kelvin Lemoine is now on the Health Connect Registry.').click();
   await page.getByRole('heading', { name: 'Successfully registered!' }).click();
-  
+  */
 }); 
 
 

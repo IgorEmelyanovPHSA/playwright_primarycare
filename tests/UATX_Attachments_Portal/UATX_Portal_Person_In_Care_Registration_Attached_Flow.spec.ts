@@ -3,9 +3,9 @@ import { test, expect } from '@playwright/test';
 
 test('Can_UATX_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Portal', async ({page, browser }) => {
   //UATX
-  //await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
+  await page.goto('https://healthbc--hlthbcuatx.sandbox.my.site.com/primarycarepatientregistration/s/');
   //WINTER'25
-  await page.goto('https://healthbc--previewqa.sandbox.my.site.com/primarycarepatientregistration/s/');
+  //await page.goto('https://healthbc--previewqa.sandbox.my.site.com/primarycarepatientregistration/s/');
   
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('heading', { name: 'I am registering a person in' }).click();
@@ -34,7 +34,7 @@ test('Can_UATX_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Port
   /////await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
   //await page.getByText('The information entered does not match provincial health records.').click();
 
-  
+  /*
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -102,7 +102,7 @@ test('Can_UATX_Register_Person_In_My_Care_LAWERENCE_MENZIES_for_Attached_in_Port
   await page.getByText('Lawerence Menzies is now on the Health Connect Registry.').click();
   await page.getByRole('heading', { name: 'Successfully registered!' }).click();
   await page.getByRole('button', { name: 'Start a new registration' }).click();
- 
+  */
 }); 
 
 

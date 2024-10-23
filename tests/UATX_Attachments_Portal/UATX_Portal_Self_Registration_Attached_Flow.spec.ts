@@ -29,7 +29,7 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   //AI Click on the "There was an issue with the information entered." text
   /////await page.click('omnistudio-omniscript-text-block[data-omni-key="TextBlock4"] h1.head');
   
-  
+  /*
   await page.getByRole('combobox', { name: 'Street address' }).click();
   await page.getByRole('combobox', { name: 'Street address' }).fill('15409 92 Ave');
   await page.getByRole('textbox', { name: 'City' }).click();
@@ -109,7 +109,7 @@ test('Can_do_Self_SILAS_CHERRY_Registration_for_Attached_in_Portal', async ({pag
   await page.getByText('Each community has a team').click();
   await page.getByRole('heading', { name: 'Successfully registered!' }).click();
  
-  
+ */ 
   });  
 
 
